@@ -418,8 +418,8 @@
 <script>
 	var now = new Date(); 
 	function createtime() { 
-		var grt= new Date("12/31/2018 00:00:00");//此处修改你的建站时间或者网站上线时间 
-		now.setTime(now.getTime()+250); 
+		var grt= new Date("12/31/2018 12:00:00");//此处修改你的建站时间或者网站上线时间 
+		now.setTime(now.getTime()); 
 		days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
 		hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
 		if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
