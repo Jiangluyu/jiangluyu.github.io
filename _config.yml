@@ -82,7 +82,7 @@ deploy:
   type: git
   repo: 
       github: git@github.com:jiangluyu/jiangluyu.github.io.git,master
-      coding: git@git.coding.net:jiangluyu/jiangluyu.git,master
+      coding: git@e.coding.net:jiangluyu/jiangluyu.git,master
 
 #自己添加的功能
 #1.live2d
