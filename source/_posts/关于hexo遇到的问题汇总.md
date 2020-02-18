@@ -1,5 +1,5 @@
 ---
-titie: 关于hexo遇到的问题汇总
+title: 关于hexo遇到的问题汇总
 date: 2020-02-15 19:02:17
 categories: bugfix
 Tags: [windows, macOS, npm]
