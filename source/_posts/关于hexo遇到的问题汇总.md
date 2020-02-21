@@ -9,7 +9,7 @@ Tags: [windows, macOS, npm]
 
 <!-- more -->
 
-#### Q1: gyp: No Xcode or CLT version detected!
+### Q1: gyp: No Xcode or CLT version detected!
 
 近日在将hexo从win迁移到mac时，卡在了npm安装上：
 
@@ -79,7 +79,7 @@ xcode-select --install
 
 
 
-#### Q2: hexo迁移
+### Q2: hexo迁移
 
 去年在原先的笔记本上建立的项目，彼时对github了解甚少，没想过在不同电脑上更新的需求，甚至还因此断更了一年（笑），迁移步骤如下：
 
@@ -124,7 +124,7 @@ git clone -b hexo https://github.com/yourname/yourname.github.io
 
 
 
-#### Q3: 无法备份/themes
+### Q3: 无法备份/themes
 
 在删掉themes中的所有主题的.git之后，发现使用如下命令：
 
