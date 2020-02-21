@@ -5,6 +5,10 @@ categories: bugfix
 Tags: [windows, macOS, npm]
 ---
 
+一些迁移、安装hexo时遇到的问题及解决方法。
+
+<!-- more -->
+
 #### Q1: gyp: No Xcode or CLT version detected!
 
 近日在将hexo从win迁移到mac时，卡在了npm安装上：
