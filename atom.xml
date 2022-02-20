@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://www.jiangluyu.com/"/>
+  <link href="https://www.jiangluyu.xyz/"/>
   <updated>2022-02-20T16:39:19.247Z</updated>
-  <id>https://www.jiangluyu.com/</id>
+  <id>https://www.jiangluyu.xyz/</id>
   
   <author>
     <name>Louis</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>剑指Offer</title>
-    <link href="https://www.jiangluyu.com/2022/02/21/%E5%89%91%E6%8C%87Offer/"/>
-    <id>https://www.jiangluyu.com/2022/02/21/剑指Offer/</id>
+    <link href="https://www.jiangluyu.xyz/2022/02/21/%E5%89%91%E6%8C%87Offer/"/>
+    <id>https://www.jiangluyu.xyz/2022/02/21/剑指Offer/</id>
     <published>2022-02-20T16:32:00.000Z</published>
     <updated>2022-02-20T16:39:19.247Z</updated>
     
@@ -31,17 +31,17 @@
     
     </summary>
     
-      <category term="LeetCode" scheme="https://www.jiangluyu.com/categories/LeetCode/"/>
+      <category term="LeetCode" scheme="https://www.jiangluyu.xyz/categories/LeetCode/"/>
     
     
-      <category term="LeetCode" scheme="https://www.jiangluyu.com/tags/LeetCode/"/>
+      <category term="LeetCode" scheme="https://www.jiangluyu.xyz/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>Linux学习笔记</title>
-    <link href="https://www.jiangluyu.com/2020/03/20/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>https://www.jiangluyu.com/2020/03/20/Linux学习笔记/</id>
+    <link href="https://www.jiangluyu.xyz/2020/03/20/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://www.jiangluyu.xyz/2020/03/20/Linux学习笔记/</id>
     <published>2020-03-20T12:28:07.000Z</published>
     <updated>2021-08-16T18:16:27.720Z</updated>
     
@@ -60,19 +60,19 @@
     
     </summary>
     
-      <category term="Linux" scheme="https://www.jiangluyu.com/categories/Linux/"/>
+      <category term="Linux" scheme="https://www.jiangluyu.xyz/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="https://www.jiangluyu.com/tags/Linux/"/>
+      <category term="Linux" scheme="https://www.jiangluyu.xyz/tags/Linux/"/>
     
-      <category term="初学者" scheme="https://www.jiangluyu.com/tags/%E5%88%9D%E5%AD%A6%E8%80%85/"/>
+      <category term="初学者" scheme="https://www.jiangluyu.xyz/tags/%E5%88%9D%E5%AD%A6%E8%80%85/"/>
     
   </entry>
   
   <entry>
     <title>六道股票问题</title>
-    <link href="https://www.jiangluyu.com/2020/03/09/%E5%85%AD%E9%81%93%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98/"/>
-    <id>https://www.jiangluyu.com/2020/03/09/六道股票问题/</id>
+    <link href="https://www.jiangluyu.xyz/2020/03/09/%E5%85%AD%E9%81%93%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98/"/>
+    <id>https://www.jiangluyu.xyz/2020/03/09/六道股票问题/</id>
     <published>2020-03-09T03:33:29.000Z</published>
     <updated>2021-08-16T18:16:27.721Z</updated>
     
@@ -87,23 +87,23 @@
     
     </summary>
     
-      <category term="LeetCode" scheme="https://www.jiangluyu.com/categories/LeetCode/"/>
+      <category term="LeetCode" scheme="https://www.jiangluyu.xyz/categories/LeetCode/"/>
     
     
-      <category term="easy" scheme="https://www.jiangluyu.com/tags/easy/"/>
+      <category term="easy" scheme="https://www.jiangluyu.xyz/tags/easy/"/>
     
-      <category term="medium" scheme="https://www.jiangluyu.com/tags/medium/"/>
+      <category term="medium" scheme="https://www.jiangluyu.xyz/tags/medium/"/>
     
-      <category term="dp" scheme="https://www.jiangluyu.com/tags/dp/"/>
+      <category term="dp" scheme="https://www.jiangluyu.xyz/tags/dp/"/>
     
-      <category term="hard" scheme="https://www.jiangluyu.com/tags/hard/"/>
+      <category term="hard" scheme="https://www.jiangluyu.xyz/tags/hard/"/>
     
   </entry>
   
   <entry>
     <title>M322-零钱兑换</title>
-    <link href="https://www.jiangluyu.com/2020/03/08/M322-%E9%9B%B6%E9%92%B1%E5%85%91%E6%8D%A2/"/>
-    <id>https://www.jiangluyu.com/2020/03/08/M322-零钱兑换/</id>
+    <link href="https://www.jiangluyu.xyz/2020/03/08/M322-%E9%9B%B6%E9%92%B1%E5%85%91%E6%8D%A2/"/>
+    <id>https://www.jiangluyu.xyz/2020/03/08/M322-零钱兑换/</id>
     <published>2020-03-08T03:38:41.000Z</published>
     <updated>2021-08-16T18:16:27.720Z</updated>
     
@@ -115,21 +115,21 @@
     
     </summary>
     
-      <category term="LeetCode" scheme="https://www.jiangluyu.com/categories/LeetCode/"/>
+      <category term="LeetCode" scheme="https://www.jiangluyu.xyz/categories/LeetCode/"/>
     
     
-      <category term="medium" scheme="https://www.jiangluyu.com/tags/medium/"/>
+      <category term="medium" scheme="https://www.jiangluyu.xyz/tags/medium/"/>
     
-      <category term="dp" scheme="https://www.jiangluyu.com/tags/dp/"/>
+      <category term="dp" scheme="https://www.jiangluyu.xyz/tags/dp/"/>
     
-      <category term="greedy" scheme="https://www.jiangluyu.com/tags/greedy/"/>
+      <category term="greedy" scheme="https://www.jiangluyu.xyz/tags/greedy/"/>
     
   </entry>
   
   <entry>
     <title>常用排序算法详解</title>
-    <link href="https://www.jiangluyu.com/2020/03/02/%E5%B8%B8%E7%94%A8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/"/>
-    <id>https://www.jiangluyu.com/2020/03/02/常用排序算法详解/</id>
+    <link href="https://www.jiangluyu.xyz/2020/03/02/%E5%B8%B8%E7%94%A8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/"/>
+    <id>https://www.jiangluyu.xyz/2020/03/02/常用排序算法详解/</id>
     <published>2020-03-02T15:43:00.000Z</published>
     <updated>2021-08-16T18:16:27.723Z</updated>
     
@@ -248,19 +248,19 @@
     
     </summary>
     
-      <category term="C++" scheme="https://www.jiangluyu.com/categories/C/"/>
+      <category term="C++" scheme="https://www.jiangluyu.xyz/categories/C/"/>
     
     
-      <category term="算法" scheme="https://www.jiangluyu.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://www.jiangluyu.xyz/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="排序" scheme="https://www.jiangluyu.com/tags/%E6%8E%92%E5%BA%8F/"/>
+      <category term="排序" scheme="https://www.jiangluyu.xyz/tags/%E6%8E%92%E5%BA%8F/"/>
     
   </entry>
   
   <entry>
     <title>今日母亲为我理发</title>
-    <link href="https://www.jiangluyu.com/2020/02/29/%E4%BB%8A%E6%97%A5%E6%AF%8D%E4%BA%B2%E4%B8%BA%E6%88%91%E7%90%86%E5%8F%91/"/>
-    <id>https://www.jiangluyu.com/2020/02/29/今日母亲为我理发/</id>
+    <link href="https://www.jiangluyu.xyz/2020/02/29/%E4%BB%8A%E6%97%A5%E6%AF%8D%E4%BA%B2%E4%B8%BA%E6%88%91%E7%90%86%E5%8F%91/"/>
+    <id>https://www.jiangluyu.xyz/2020/02/29/今日母亲为我理发/</id>
     <published>2020-02-28T17:57:53.000Z</published>
     <updated>2021-08-16T18:16:27.721Z</updated>
     
@@ -282,17 +282,17 @@
     
     </summary>
     
-      <category term="日常" scheme="https://www.jiangluyu.com/categories/%E6%97%A5%E5%B8%B8/"/>
+      <category term="日常" scheme="https://www.jiangluyu.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
     
     
-      <category term="活在此时" scheme="https://www.jiangluyu.com/tags/%E6%B4%BB%E5%9C%A8%E6%AD%A4%E6%97%B6/"/>
+      <category term="活在此时" scheme="https://www.jiangluyu.xyz/tags/%E6%B4%BB%E5%9C%A8%E6%AD%A4%E6%97%B6/"/>
     
   </entry>
   
   <entry>
     <title>C++set详解</title>
-    <link href="https://www.jiangluyu.com/2020/02/27/C++set/"/>
-    <id>https://www.jiangluyu.com/2020/02/27/C++set/</id>
+    <link href="https://www.jiangluyu.xyz/2020/02/27/C++set/"/>
+    <id>https://www.jiangluyu.xyz/2020/02/27/C++set/</id>
     <published>2020-02-26T16:43:00.000Z</published>
     <updated>2021-08-16T18:16:27.717Z</updated>
     
@@ -304,19 +304,19 @@
     
     </summary>
     
-      <category term="C++" scheme="https://www.jiangluyu.com/categories/C/"/>
+      <category term="C++" scheme="https://www.jiangluyu.xyz/categories/C/"/>
     
     
-      <category term="算法" scheme="https://www.jiangluyu.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://www.jiangluyu.xyz/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="STL" scheme="https://www.jiangluyu.com/tags/STL/"/>
+      <category term="STL" scheme="https://www.jiangluyu.xyz/tags/STL/"/>
     
   </entry>
   
   <entry>
     <title>E021-合并两个有序链表</title>
-    <link href="https://www.jiangluyu.com/2020/02/21/E021-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/"/>
-    <id>https://www.jiangluyu.com/2020/02/21/E021-合并两个有序链表/</id>
+    <link href="https://www.jiangluyu.xyz/2020/02/21/E021-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/"/>
+    <id>https://www.jiangluyu.xyz/2020/02/21/E021-合并两个有序链表/</id>
     <published>2020-02-21T15:08:27.000Z</published>
     <updated>2021-08-16T18:16:27.718Z</updated>
     
@@ -328,21 +328,21 @@
     
     </summary>
     
-      <category term="LeetCode" scheme="https://www.jiangluyu.com/categories/LeetCode/"/>
+      <category term="LeetCode" scheme="https://www.jiangluyu.xyz/categories/LeetCode/"/>
     
     
-      <category term="easy" scheme="https://www.jiangluyu.com/tags/easy/"/>
+      <category term="easy" scheme="https://www.jiangluyu.xyz/tags/easy/"/>
     
-      <category term="recursion" scheme="https://www.jiangluyu.com/tags/recursion/"/>
+      <category term="recursion" scheme="https://www.jiangluyu.xyz/tags/recursion/"/>
     
-      <category term="iteration" scheme="https://www.jiangluyu.com/tags/iteration/"/>
+      <category term="iteration" scheme="https://www.jiangluyu.xyz/tags/iteration/"/>
     
   </entry>
   
   <entry>
     <title>电脑维修实用问题汇总</title>
-    <link href="https://www.jiangluyu.com/2020/02/21/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE%E5%AE%9E%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
-    <id>https://www.jiangluyu.com/2020/02/21/电脑维修实用问题汇总/</id>
+    <link href="https://www.jiangluyu.xyz/2020/02/21/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE%E5%AE%9E%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
+    <id>https://www.jiangluyu.xyz/2020/02/21/电脑维修实用问题汇总/</id>
     <published>2020-02-21T10:51:37.000Z</published>
     <updated>2021-08-16T18:16:27.725Z</updated>
     
@@ -354,17 +354,17 @@
     
     </summary>
     
-      <category term="电脑维修" scheme="https://www.jiangluyu.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+      <category term="电脑维修" scheme="https://www.jiangluyu.xyz/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
     
     
-      <category term="问题汇总" scheme="https://www.jiangluyu.com/tags/%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
+      <category term="问题汇总" scheme="https://www.jiangluyu.xyz/tags/%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
     
   </entry>
   
   <entry>
     <title>形近词辨析</title>
-    <link href="https://www.jiangluyu.com/2020/02/16/%E5%BD%A2%E8%BF%91%E8%AF%8D%E8%BE%A8%E6%9E%90/"/>
-    <id>https://www.jiangluyu.com/2020/02/16/形近词辨析/</id>
+    <link href="https://www.jiangluyu.xyz/2020/02/16/%E5%BD%A2%E8%BF%91%E8%AF%8D%E8%BE%A8%E6%9E%90/"/>
+    <id>https://www.jiangluyu.xyz/2020/02/16/形近词辨析/</id>
     <published>2020-02-16T07:37:16.000Z</published>
     <updated>2021-08-16T18:16:27.723Z</updated>
     
@@ -376,19 +376,19 @@
     
     </summary>
     
-      <category term="TOEFL" scheme="https://www.jiangluyu.com/categories/TOEFL/"/>
+      <category term="TOEFL" scheme="https://www.jiangluyu.xyz/categories/TOEFL/"/>
     
-      <category term="GRE" scheme="https://www.jiangluyu.com/categories/TOEFL/GRE/"/>
+      <category term="GRE" scheme="https://www.jiangluyu.xyz/categories/TOEFL/GRE/"/>
     
     
-      <category term="阅读" scheme="https://www.jiangluyu.com/tags/%E9%98%85%E8%AF%BB/"/>
+      <category term="阅读" scheme="https://www.jiangluyu.xyz/tags/%E9%98%85%E8%AF%BB/"/>
     
   </entry>
   
   <entry>
     <title>独立口语思路练习</title>
-    <link href="https://www.jiangluyu.com/2020/02/15/%E7%8B%AC%E7%AB%8B%E5%8F%A3%E8%AF%AD%E6%80%9D%E8%B7%AF%E7%BB%83%E4%B9%A0/"/>
-    <id>https://www.jiangluyu.com/2020/02/15/独立口语思路练习/</id>
+    <link href="https://www.jiangluyu.xyz/2020/02/15/%E7%8B%AC%E7%AB%8B%E5%8F%A3%E8%AF%AD%E6%80%9D%E8%B7%AF%E7%BB%83%E4%B9%A0/"/>
+    <id>https://www.jiangluyu.xyz/2020/02/15/独立口语思路练习/</id>
     <published>2020-02-15T14:52:49.000Z</published>
     <updated>2021-08-16T18:16:27.724Z</updated>
     
@@ -400,17 +400,17 @@
     
     </summary>
     
-      <category term="TOEFL" scheme="https://www.jiangluyu.com/categories/TOEFL/"/>
+      <category term="TOEFL" scheme="https://www.jiangluyu.xyz/categories/TOEFL/"/>
     
     
-      <category term="口语" scheme="https://www.jiangluyu.com/tags/%E5%8F%A3%E8%AF%AD/"/>
+      <category term="口语" scheme="https://www.jiangluyu.xyz/tags/%E5%8F%A3%E8%AF%AD/"/>
     
   </entry>
   
   <entry>
     <title>托福答题模板（自用）</title>
-    <link href="https://www.jiangluyu.com/2020/02/15/%E6%89%98%E7%A6%8F%E7%AD%94%E9%A2%98%E6%A8%A1%E6%9D%BF%EF%BC%88%E8%87%AA%E7%94%A8%EF%BC%89/"/>
-    <id>https://www.jiangluyu.com/2020/02/15/托福答题模板（自用）/</id>
+    <link href="https://www.jiangluyu.xyz/2020/02/15/%E6%89%98%E7%A6%8F%E7%AD%94%E9%A2%98%E6%A8%A1%E6%9D%BF%EF%BC%88%E8%87%AA%E7%94%A8%EF%BC%89/"/>
+    <id>https://www.jiangluyu.xyz/2020/02/15/托福答题模板（自用）/</id>
     <published>2020-02-15T14:32:57.000Z</published>
     <updated>2021-08-16T18:16:27.724Z</updated>
     
@@ -422,17 +422,17 @@
     
     </summary>
     
-      <category term="TOEFL" scheme="https://www.jiangluyu.com/categories/TOEFL/"/>
+      <category term="TOEFL" scheme="https://www.jiangluyu.xyz/categories/TOEFL/"/>
     
     
-      <category term="口语" scheme="https://www.jiangluyu.com/tags/%E5%8F%A3%E8%AF%AD/"/>
+      <category term="口语" scheme="https://www.jiangluyu.xyz/tags/%E5%8F%A3%E8%AF%AD/"/>
     
   </entry>
   
   <entry>
     <title>托福口语语料积累（更新中）</title>
-    <link href="https://www.jiangluyu.com/2020/02/15/%E6%89%98%E7%A6%8F%E5%8F%A3%E8%AF%AD%E8%AF%AD%E6%96%99%E7%A7%AF%E7%B4%AF%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89/"/>
-    <id>https://www.jiangluyu.com/2020/02/15/托福口语语料积累（更新中）/</id>
+    <link href="https://www.jiangluyu.xyz/2020/02/15/%E6%89%98%E7%A6%8F%E5%8F%A3%E8%AF%AD%E8%AF%AD%E6%96%99%E7%A7%AF%E7%B4%AF%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89/"/>
+    <id>https://www.jiangluyu.xyz/2020/02/15/托福口语语料积累（更新中）/</id>
     <published>2020-02-15T14:12:31.000Z</published>
     <updated>2021-08-16T18:16:27.724Z</updated>
     
@@ -444,17 +444,17 @@
     
     </summary>
     
-      <category term="TOEFL" scheme="https://www.jiangluyu.com/categories/TOEFL/"/>
+      <category term="TOEFL" scheme="https://www.jiangluyu.xyz/categories/TOEFL/"/>
     
     
-      <category term="口语" scheme="https://www.jiangluyu.com/tags/%E5%8F%A3%E8%AF%AD/"/>
+      <category term="口语" scheme="https://www.jiangluyu.xyz/tags/%E5%8F%A3%E8%AF%AD/"/>
     
   </entry>
   
   <entry>
     <title>关于hexo遇到的问题汇总</title>
-    <link href="https://www.jiangluyu.com/2020/02/15/%E5%85%B3%E4%BA%8Ehexo%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
-    <id>https://www.jiangluyu.com/2020/02/15/关于hexo遇到的问题汇总/</id>
+    <link href="https://www.jiangluyu.xyz/2020/02/15/%E5%85%B3%E4%BA%8Ehexo%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
+    <id>https://www.jiangluyu.xyz/2020/02/15/关于hexo遇到的问题汇总/</id>
     <published>2020-02-15T11:02:17.000Z</published>
     <updated>2021-08-16T18:16:27.722Z</updated>
     
@@ -466,15 +466,15 @@
     
     </summary>
     
-      <category term="bugfix" scheme="https://www.jiangluyu.com/categories/bugfix/"/>
+      <category term="bugfix" scheme="https://www.jiangluyu.xyz/categories/bugfix/"/>
     
     
   </entry>
   
   <entry>
     <title>E867-转置矩阵</title>
-    <link href="https://www.jiangluyu.com/2020/02/14/E867-%E8%BD%AC%E7%BD%AE%E7%9F%A9%E9%98%B5/"/>
-    <id>https://www.jiangluyu.com/2020/02/14/E867-转置矩阵/</id>
+    <link href="https://www.jiangluyu.xyz/2020/02/14/E867-%E8%BD%AC%E7%BD%AE%E7%9F%A9%E9%98%B5/"/>
+    <id>https://www.jiangluyu.xyz/2020/02/14/E867-转置矩阵/</id>
     <published>2020-02-14T07:31:56.000Z</published>
     <updated>2021-08-16T18:16:27.719Z</updated>
     
@@ -487,19 +487,19 @@
     
     </summary>
     
-      <category term="LeetCode" scheme="https://www.jiangluyu.com/categories/LeetCode/"/>
+      <category term="LeetCode" scheme="https://www.jiangluyu.xyz/categories/LeetCode/"/>
     
     
-      <category term="easy" scheme="https://www.jiangluyu.com/tags/easy/"/>
+      <category term="easy" scheme="https://www.jiangluyu.xyz/tags/easy/"/>
     
-      <category term="iteration" scheme="https://www.jiangluyu.com/tags/iteration/"/>
+      <category term="iteration" scheme="https://www.jiangluyu.xyz/tags/iteration/"/>
     
   </entry>
   
   <entry>
     <title>E206-反转链表</title>
-    <link href="https://www.jiangluyu.com/2020/02/14/E206-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/"/>
-    <id>https://www.jiangluyu.com/2020/02/14/E206-反转链表/</id>
+    <link href="https://www.jiangluyu.xyz/2020/02/14/E206-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/"/>
+    <id>https://www.jiangluyu.xyz/2020/02/14/E206-反转链表/</id>
     <published>2020-02-13T16:35:27.000Z</published>
     <updated>2021-08-16T18:16:27.718Z</updated>
     
@@ -511,23 +511,23 @@
     
     </summary>
     
-      <category term="LeetCode" scheme="https://www.jiangluyu.com/categories/LeetCode/"/>
+      <category term="LeetCode" scheme="https://www.jiangluyu.xyz/categories/LeetCode/"/>
     
     
-      <category term="easy" scheme="https://www.jiangluyu.com/tags/easy/"/>
+      <category term="easy" scheme="https://www.jiangluyu.xyz/tags/easy/"/>
     
-      <category term="recursion" scheme="https://www.jiangluyu.com/tags/recursion/"/>
+      <category term="recursion" scheme="https://www.jiangluyu.xyz/tags/recursion/"/>
     
-      <category term="iteration" scheme="https://www.jiangluyu.com/tags/iteration/"/>
+      <category term="iteration" scheme="https://www.jiangluyu.xyz/tags/iteration/"/>
     
-      <category term="vector" scheme="https://www.jiangluyu.com/tags/vector/"/>
+      <category term="vector" scheme="https://www.jiangluyu.xyz/tags/vector/"/>
     
   </entry>
   
   <entry>
     <title>少少</title>
-    <link href="https://www.jiangluyu.com/2019/01/04/%E5%B0%91%E5%B0%91/"/>
-    <id>https://www.jiangluyu.com/2019/01/04/少少/</id>
+    <link href="https://www.jiangluyu.xyz/2019/01/04/%E5%B0%91%E5%B0%91/"/>
+    <id>https://www.jiangluyu.xyz/2019/01/04/少少/</id>
     <published>2019-01-03T16:05:16.000Z</published>
     <updated>2021-08-16T18:16:27.722Z</updated>
     
@@ -539,19 +539,19 @@
     
     </summary>
     
-      <category term="随便写写" scheme="https://www.jiangluyu.com/categories/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/"/>
+      <category term="随便写写" scheme="https://www.jiangluyu.xyz/categories/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/"/>
     
     
-      <category term="随想" scheme="https://www.jiangluyu.com/tags/%E9%9A%8F%E6%83%B3/"/>
+      <category term="随想" scheme="https://www.jiangluyu.xyz/tags/%E9%9A%8F%E6%83%B3/"/>
     
-      <category term="生活" scheme="https://www.jiangluyu.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="https://www.jiangluyu.xyz/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
     <title>不问归期来路</title>
-    <link href="https://www.jiangluyu.com/2019/01/01/%E4%B8%8D%E9%97%AE%E5%BD%92%E6%9C%9F%E6%9D%A5%E8%B7%AF/"/>
-    <id>https://www.jiangluyu.com/2019/01/01/不问归期来路/</id>
+    <link href="https://www.jiangluyu.xyz/2019/01/01/%E4%B8%8D%E9%97%AE%E5%BD%92%E6%9C%9F%E6%9D%A5%E8%B7%AF/"/>
+    <id>https://www.jiangluyu.xyz/2019/01/01/不问归期来路/</id>
     <published>2018-12-31T23:12:27.000Z</published>
     <updated>2021-08-16T18:16:27.721Z</updated>
     
@@ -565,10 +565,10 @@
     
     </summary>
     
-      <category term="年终总结" scheme="https://www.jiangluyu.com/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
+      <category term="年终总结" scheme="https://www.jiangluyu.xyz/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="总结" scheme="https://www.jiangluyu.com/tags/%E6%80%BB%E7%BB%93/"/>
+      <category term="总结" scheme="https://www.jiangluyu.xyz/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
