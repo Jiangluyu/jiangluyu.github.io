@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Louis">
+
+
+
+<meta name="description" content="文章为转载，侵删，仅供自己收藏 [英文版][https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/discuss/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems][中文版翻译][https">
+<meta name="keywords" content="easy,medium,dp,hard">
+<meta property="og:type" content="article">
+<meta property="og:title" content="六道股票问题">
+<meta property="og:url" content="https://www.jiangluyu.com/2020/03/09/六道股票问题/index.html">
+<meta property="og:site_name" content="Louis睡醒了">
+<meta property="og:description" content="文章为转载，侵删，仅供自己收藏 [英文版][https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/discuss/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems][中文版翻译][https">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-08-16T18:16:27.721Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="六道股票问题">
+<meta name="twitter:description" content="文章为转载，侵删，仅供自己收藏 [英文版][https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/discuss/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems][中文版翻译][https">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Louis睡醒了" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>六道股票问题 | Louis睡醒了</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/cat.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Louis</a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/categories/LeetCode">LeetCode</a></li>
+                        
+                            <li><a href="/categories/TOEFL">TOEFL</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:945803847@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" href="http://weibo.com/louisaimoyu" title="新浪微博"></a>
+                            
+                                <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=945803847&site=qq&menu=yes" title="QQ"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Louis</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/cat.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Louis</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/LeetCode">LeetCode</a></li>
+                
+                    <li><a href="/categories/TOEFL">TOEFL</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:945803847@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/louisaimoyu" title="新浪微博"></a>
+                            
+                                <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=945803847&site=qq&menu=yes" title="QQ"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-六道股票问题" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2020/03/09/六道股票问题/" class="article-date">
+      <time datetime="2020-03-09T03:33:29.000Z" itemprop="datePublished">2020-03-09</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      六道股票问题
+    </h1>
+  
+
+		
+		   <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">4.8k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">20分</span>
+      </span>
+    </span>
+</div>
+
+		
+      </header>
+      
+      <div class="article-info article-info-post" style="margin-top:10px">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dp/">dp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/easy/">easy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hard/">hard</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/medium/">medium</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <blockquote>
+<p>文章为转载，侵删，仅供自己收藏</p>
+<p>[英文版][<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/discuss/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems">https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/discuss/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems</a>]<br>[中文版翻译][<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/yi-ge-fang-fa-tuan-mie-6-dao-gu-piao-wen-ti-by-l-3/">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/yi-ge-fang-fa-tuan-mie-6-dao-gu-piao-wen-ti-by-l-3/</a>]</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="0-背景"><a href="#0-背景" class="headerlink" title="0 背景"></a>0 背景</h3><p>很多读者抱怨股票系列问题奇技淫巧太多，如果面试真的遇到这类问题，基本不会想到那些巧妙的办法，怎么办？所以本文拒绝奇技淫巧，而是稳扎稳打，只用一种通用方法解决所用问题，以不变应万变。</p>
+<p>这篇文章用状态机的技巧来解决，可以全部提交通过。不要觉得这个名词高大上，文学词汇而已，实际上就是 DP table，看一眼就明白了。</p>
+<p>先随便抽出一道题，看看别人的解法：      </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; prices)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(prices.empty()) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> s1 = -prices[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">int</span> s2 = INT_MIN;</span><br><span class="line">    <span class="keyword">int</span> s3 = INT_MIN;</span><br><span class="line">    <span class="keyword">int</span> s4 = INT_MIN;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; prices.size(); ++i) &#123;            </span><br><span class="line">        s1 = max(s1, -prices[i]);</span><br><span class="line">        s2 = max(s2, s1 + prices[i]);</span><br><span class="line">        s3 = max(s3, s2 - prices[i]);</span><br><span class="line">        s4 = max(s4, s3 + prices[i]);</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="keyword">return</span> max(<span class="number">0</span>, s4);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>能看懂吧？会做了吗？不可能的，你看不懂，这才正常。就算你勉强看懂了，下一个问题你还是做不出来。为什么别人能写出这么诡异却又高效的解法呢？因为这类问题是有框架的，但是人家不会告诉你的，因为一旦告诉你，你五分钟就学会了，该算法题就不再神秘，变得不堪一击了。</p>
+<p>本文就来告诉你这个框架，然后带着你一道一道秒杀。</p>
+<p>这 6 道股票买卖问题是有共性的，我们通过对第四题（限制最大交易次数为 k）的分析一道一道解决。因为第四题是一个最泛化的形式，其他的问题都是这个形式的简化。</p>
+<p>第一题是只进行一次交易，相当于 k = 1；第二题是不限交易次数，相当于 k = +infinity（正无穷）；第三题是只进行 2 次交易，相当于 k = 2；剩下两道也是不限次数，但是加了交易「冷冻期」和「手续费」的额外条件，其实就是第二题的变种，都很容易处理。</p>
+<h3 id="1-穷举框架"><a href="#1-穷举框架" class="headerlink" title="1 穷举框架"></a>1 穷举框架</h3><p>首先，还是一样的思路：如何穷举？这里的穷举思路和上篇文章递归的思想不太一样。</p>
+<p>递归其实是符合我们思考的逻辑的，一步步推进，遇到无法解决的就丢给递归，一不小心就做出来了，可读性还很好。缺点就是一旦出错，你也不容易找到错误出现的原因。比如上篇文章的递归解法，肯定还有计算冗余，但确实不容易找到。</p>
+<p>而这里，我们不用递归思想进行穷举，而是利用「状态」进行穷举。我们具体到每一天，看看总共有几种可能的「状态」，再找出每个「状态」对应的「选择」。我们要穷举所有「状态」，穷举的目的是根据对应的「选择」更新状态。听起来抽象，你只要记住「状态」和「选择」两个词就行，下面实操一下就很容易明白了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> 状态<span class="number">1</span> in 状态<span class="number">1</span>的所有取值：</span><br><span class="line">    <span class="keyword">for</span> 状态<span class="number">2</span> in 状态<span class="number">2</span>的所有取值：</span><br><span class="line">        <span class="keyword">for</span> ...</span><br><span class="line">            dp[状态<span class="number">1</span>][状态<span class="number">2</span>][...] = 择优(选择<span class="number">1</span>，选择<span class="number">2</span>...)</span><br></pre></td></tr></table></figure>
+<p>比如说这个问题，每天都有三种「选择」：<strong>买入、卖出、无操作</strong>，我们用 <strong>buy, sell, rest</strong> 表示这三种选择。但问题是，并不是每天都可以任意选择这三种选择的，因为 <strong>sell 必须在 buy 之后，buy 必须在 sell 之后</strong>。那么 rest 操作还应该分两种状态，<strong>一种是 buy 之后的 rest（持有了股票），一种是 sell 之后的 rest（没有持有股票）</strong>。而且别忘了，我们还有交易次数 k 的限制，就是说你 buy 还只能在 k &gt; 0 的前提下操作。</p>
+<p>很复杂对吧，不要怕，我们现在的目的只是穷举，你有再多的状态，老夫要做的就是一把梭全部列举出来。这个问题的「状态」有三个，第一个是天数，第二个是允许交易的最大次数，第三个是当前的持有状态（即之前说的 rest 的状态，我们不妨用 1 表示持有，0 表示没有持有）。然后我们用一个三维数组就可以装下这几种状态的全部组合：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dp[i][k][<span class="number">0</span> or <span class="number">1</span>]</span><br><span class="line"><span class="number">0</span> &lt;= i &lt;= n-<span class="number">1</span>, <span class="number">1</span> &lt;= k &lt;= K</span><br><span class="line">n 为天数，大 K 为最多交易数</span><br><span class="line">此问题共 n × K × <span class="number">2</span> 种状态，全部穷举就能搞定。</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> <span class="number">0</span> &lt;= i &lt; n:</span><br><span class="line">    <span class="keyword">for</span> <span class="number">1</span> &lt;= k &lt;= K:</span><br><span class="line">        <span class="keyword">for</span> s in &#123;<span class="number">0</span>, <span class="number">1</span>&#125;:</span><br><span class="line">            dp[i][k][s] = max(buy, sell, rest)</span><br></pre></td></tr></table></figure>
+<p>而且我们可以用自然语言描述出每一个状态的含义，比如说<code>dp[3][2][1]</code>的含义就是：今天是第三天，我现在手上持有着股票，至今最多进行 2 次交易。再比如<code>dp[2][3][0]</code>的含义：今天是第二天，我现在手上没有持有股票，至今最多进行 3 次交易。很容易理解，对吧？</p>
+<p>我们想求的最终答案是<code>dp[n - 1][K][0]</code>即最后一天，最多允许 K 次交易，最多获得多少利润。读者可能问为什么不是<code>dp[n - 1][K][1]</code>？因为<code>[1]</code>代表手上还持有股票，<code>[0]</code> 表示手上的股票已经卖出去了，很显然后者得到的利润一定大于前者。</p>
+<p>记住如何解释「状态」，一旦你觉得哪里不好理解，把它翻译成自然语言就容易理解了。</p>
+<h3 id="2-状态转移框架"><a href="#2-状态转移框架" class="headerlink" title="2 状态转移框架"></a>2 状态转移框架</h3><p>现在，我们完成了「状态」的穷举，我们开始思考每种「状态」有哪些「选择」，应该如何更新「状态」。只看「持有状态」，可以画个状态转移图。</p>
+<p>通过这个图可以很清楚地看到，每种状态（0 和 1）是如何转移而来的。根据这个图，我们来写一下状态转移方程：</p>
+<p>dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i])<br>              max(   选择 rest  ,           选择 sell      )</p>
+<p>解释：今天我没有持有股票，有两种可能：<br>要么是我昨天就没有持有，然后今天选择 rest，所以我今天还是没有持有；<br>要么是我昨天持有股票，但是今天我 sell 了，所以我今天没有持有股票了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dp[i][k][<span class="number">1</span>] = max(dp[i-<span class="number">1</span>][k][<span class="number">1</span>], dp[i-<span class="number">1</span>][k-<span class="number">1</span>][<span class="number">0</span>] - prices[i])</span><br><span class="line">              max(选择rest      ，选择buy)</span><br></pre></td></tr></table></figure>
+<p>解释：今天我持有着股票，有两种可能：<br><strong>要么我昨天就持有着股票，然后今天选择 rest，所以我今天还持有着股票；</strong><br><strong>要么我昨天本没有持有，但今天我选择 buy，所以今天我就持有股票了。</strong></p>
+<p>这个解释应该很清楚了，如果 buy，就要从利润中减去 prices[i]，如果 sell，就要给利润增加 prices[i]。今天的最大利润就是这两种可能选择中较大的那个。而且注意 k 的限制，我们在选择 buy 的时候，把 k 减小了 1，很好理解吧，当然你也可以在 sell 的时候减 1，一样的。</p>
+<p>现在，我们已经完成了动态规划中最困难的一步：状态转移方程。如果之前的内容你都可以理解，那么你已经可以秒杀所有问题了，只要套这个框架就行了。不过还差最后一点点，就是定义 base case，即最简单的情况。</p>
+<p><code>dp[-1][k][0] = 0</code><br>解释：因为 i 是从 0 开始的，所以 i = -1 意味着还没有开始，这时候的利润当然是 0 。<br><code>dp[-1][k][1] = -infinity</code><br>解释：还没开始的时候，是不可能持有股票的，用负无穷表示这种不可能。<br><code>dp[i][0][0] = 0</code><br>解释：因为 k 是从 1 开始的，所以 k = 0 意味着根本不允许交易，这时候利润当然是 0 。<br><code>dp[i][0][1] = -infinity</code><br>解释：不允许交易的情况下，是不可能持有股票的，用负无穷表示这种不可能。<br>把上面的状态转移方程总结一下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">base <span class="keyword">case</span>：</span><br><span class="line">dp[-<span class="number">1</span>][k][<span class="number">0</span>] = dp[i][<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span></span><br><span class="line">dp[-<span class="number">1</span>][k][<span class="number">1</span>] = dp[i][<span class="number">0</span>][<span class="number">1</span>] = -infinity</span><br><span class="line"></span><br><span class="line">状态转移方程：</span><br><span class="line">dp[i][k][<span class="number">0</span>] = max(dp[i-<span class="number">1</span>][k][<span class="number">0</span>], dp[i-<span class="number">1</span>][k][<span class="number">1</span>] + prices[i])</span><br><span class="line">dp[i][k][<span class="number">1</span>] = max(dp[i-<span class="number">1</span>][k][<span class="number">1</span>], dp[i-<span class="number">1</span>][k-<span class="number">1</span>][<span class="number">0</span>] - prices[i])</span><br></pre></td></tr></table></figure>
+<p>读者可能会问，这个数组索引是 -1 怎么编程表示出来呢，负无穷怎么表示呢？这都是细节问题，有很多方法实现。现在完整的框架已经完成，下面开始具体化。</p>
+<h3 id="3-秒杀题目"><a href="#3-秒杀题目" class="headerlink" title="3 秒杀题目"></a>3 秒杀题目</h3><h4 id="3-1-k-1"><a href="#3-1-k-1" class="headerlink" title="3.1 k = 1"></a>3.1 k = 1</h4><p>直接套状态转移方程，根据 base case，可以做一些化简：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dp[i][<span class="number">1</span>][<span class="number">0</span>] = max(dp[i-<span class="number">1</span>][<span class="number">1</span>][<span class="number">0</span>], dp[i-<span class="number">1</span>][<span class="number">1</span>][<span class="number">1</span>] + prices[i])</span><br><span class="line">dp[i][<span class="number">1</span>][<span class="number">1</span>] = max(dp[i-<span class="number">1</span>][<span class="number">1</span>][<span class="number">1</span>], dp[i-<span class="number">1</span>][<span class="number">0</span>][<span class="number">0</span>] - prices[i]) </span><br><span class="line">            = max(dp[i-<span class="number">1</span>][<span class="number">1</span>][<span class="number">1</span>], -prices[i])</span><br></pre></td></tr></table></figure>
+<p>解释：k = 0 的 base case，所以<code>dp[i-1][0][0] = 0</code>。</p>
+<p>现在发现 k 都是 1，不会改变，即 k 对状态转移已经没有影响了。<br>可以进行进一步化简去掉所有 k：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dp[i][<span class="number">0</span>] = max(dp[i-<span class="number">1</span>][<span class="number">0</span>], dp[i-<span class="number">1</span>][<span class="number">1</span>] + prices[i])</span><br><span class="line">dp[i][<span class="number">1</span>] = max(dp[i-<span class="number">1</span>][<span class="number">1</span>], -prices[i])</span><br></pre></td></tr></table></figure>
+<p>直接写出代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = prices.length;</span><br><span class="line"><span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n][<span class="number">2</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    dp[i][<span class="number">0</span>] = Math.max(dp[i-<span class="number">1</span>][<span class="number">0</span>], dp[i-<span class="number">1</span>][<span class="number">1</span>] + prices[i]);</span><br><span class="line">    dp[i][<span class="number">1</span>] = Math.max(dp[i-<span class="number">1</span>][<span class="number">1</span>], -prices[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> dp[n - <span class="number">1</span>][<span class="number">0</span>];</span><br></pre></td></tr></table></figure>
+<p>显然 i = 0 时<code>dp[i-1]</code>是不合法的。这是因为我们没有对 i 的 base case 进行处理。可以这样处理：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (i - <span class="number">1</span> == -<span class="number">1</span>) &#123;</span><br><span class="line">        dp[i][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 解释：</span></span><br><span class="line">        <span class="comment">//   dp[i][0] </span></span><br><span class="line">        <span class="comment">// = max(dp[-1][0], dp[-1][1] + prices[i])</span></span><br><span class="line">        <span class="comment">// = max(0, -infinity + prices[i]) = 0</span></span><br><span class="line">        dp[i][<span class="number">1</span>] = -prices[i];</span><br><span class="line">        <span class="comment">//解释：</span></span><br><span class="line">        <span class="comment">//   dp[i][1] </span></span><br><span class="line">        <span class="comment">// = max(dp[-1][1], dp[-1][0] - prices[i])</span></span><br><span class="line">        <span class="comment">// = max(-infinity, 0 - prices[i]) </span></span><br><span class="line">        <span class="comment">// = -prices[i]</span></span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    dp[i][<span class="number">0</span>] = Math.max(dp[i-<span class="number">1</span>][<span class="number">0</span>], dp[i-<span class="number">1</span>][<span class="number">1</span>] + prices[i]);</span><br><span class="line">    dp[i][<span class="number">1</span>] = Math.max(dp[i-<span class="number">1</span>][<span class="number">1</span>], -prices[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> dp[n-<span class="number">1</span>][<span class="number">0</span>];</span><br></pre></td></tr></table></figure>
+<p>第一题就解决了，但是这样处理 base case 很麻烦，而且注意一下状态转移方程，新状态只和相邻的一个状态有关，其实不用整个 dp 数组，只需要一个变量储存相邻的那个状态就足够了，这样可以把空间复杂度降到 O(1):</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// k == 1</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxProfit_k_1</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = prices.length;</span><br><span class="line">    <span class="comment">// base case: dp[-1][0] = 0, dp[-1][1] = -infinity</span></span><br><span class="line">    <span class="keyword">int</span> dp_i_0 = <span class="number">0</span>, dp_i_1 = Integer.MIN_VALUE;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="comment">// dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])</span></span><br><span class="line">        dp_i_0 = Math.max(dp_i_0, dp_i_1 + prices[i]);</span><br><span class="line">        <span class="comment">// dp[i][1] = max(dp[i-1][1], -prices[i])</span></span><br><span class="line">        dp_i_1 = Math.max(dp_i_1, -prices[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp_i_0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>两种方式都是一样的，不过这种编程方法简洁很多。但是如果没有前面状态转移方程的引导，是肯定看不懂的。后续的题目，我主要写这种空间复杂度 O(1) 的解法。</p>
+<h4 id="3-2-k-infinity"><a href="#3-2-k-infinity" class="headerlink" title="3.2 k = +infinity"></a>3.2 k = +infinity</h4><p>如果 k 为正无穷，那么就可以认为 k 和 k - 1 是一样的。可以这样改写框架：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dp[i][k][<span class="number">0</span>] = max(dp[i-<span class="number">1</span>][k][<span class="number">0</span>], dp[i-<span class="number">1</span>][k][<span class="number">1</span>] + prices[i])</span><br><span class="line">dp[i][k][<span class="number">1</span>] = max(dp[i-<span class="number">1</span>][k][<span class="number">1</span>], dp[i-<span class="number">1</span>][k-<span class="number">1</span>][<span class="number">0</span>] - prices[i])</span><br><span class="line">            = max(dp[i-<span class="number">1</span>][k][<span class="number">1</span>], dp[i-<span class="number">1</span>][k][<span class="number">0</span>] - prices[i])</span><br></pre></td></tr></table></figure>
+<p>我们发现数组中的 k 已经不会改变了，也就是说不需要记录 k 这个状态了：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dp[i][<span class="number">0</span>] = max(dp[i-<span class="number">1</span>][<span class="number">0</span>], dp[i-<span class="number">1</span>][<span class="number">1</span>] + prices[i])</span><br><span class="line">dp[i][<span class="number">1</span>] = max(dp[i-<span class="number">1</span>][<span class="number">1</span>], dp[i-<span class="number">1</span>][<span class="number">0</span>] - prices[i])</span><br></pre></td></tr></table></figure>
+<p>直接翻译成代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxProfit_k_inf</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = prices.length;</span><br><span class="line">    <span class="keyword">int</span> dp_i_0 = <span class="number">0</span>, dp_i_1 = Integer.MIN_VALUE;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> temp = dp_i_0;</span><br><span class="line">        dp_i_0 = Math.max(dp_i_0, dp_i_1 + prices[i]);</span><br><span class="line">        dp_i_1 = Math.max(dp_i_1, temp - prices[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp_i_0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-3-k-infinity-with-cooldown"><a href="#3-3-k-infinity-with-cooldown" class="headerlink" title="3.3 k = +infinity with cooldown"></a>3.3 k = +infinity with cooldown</h4><p>每次 sell 之后要等一天才能继续交易。只要把这个特点融入上一题的状态转移方程即可：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dp[i][<span class="number">0</span>] = max(dp[i-<span class="number">1</span>][<span class="number">0</span>], dp[i-<span class="number">1</span>][<span class="number">1</span>] + prices[i])</span><br><span class="line">dp[i][<span class="number">1</span>] = max(dp[i-<span class="number">1</span>][<span class="number">1</span>], dp[i-<span class="number">2</span>][<span class="number">0</span>] - prices[i])</span><br></pre></td></tr></table></figure>
+<p>解释：第 i 天选择 buy 的时候，要从 i-2 的状态转移，而不是 i-1 。<br>翻译成代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxProfit_with_cool</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = prices.length;</span><br><span class="line">    <span class="keyword">int</span> dp_i_0 = <span class="number">0</span>, dp_i_1 = Integer.MIN_VALUE;</span><br><span class="line">    <span class="keyword">int</span> dp_pre_0 = <span class="number">0</span>; <span class="comment">// 代表 dp[i-2][0]</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> temp = dp_i_0;</span><br><span class="line">        dp_i_0 = Math.max(dp_i_0, dp_i_1 + prices[i]);</span><br><span class="line">        dp_i_1 = Math.max(dp_i_1, dp_pre_0 - prices[i]);</span><br><span class="line">        dp_pre_0 = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp_i_0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-4-k-infinity-with-fee"><a href="#3-4-k-infinity-with-fee" class="headerlink" title="3.4 k = +infinity with fee"></a>3.4 k = +infinity with fee</h4><p>每次交易要支付手续费，只要把手续费从利润中减去即可。改写方程：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dp[i][<span class="number">0</span>] = max(dp[i-<span class="number">1</span>][<span class="number">0</span>], dp[i-<span class="number">1</span>][<span class="number">1</span>] + prices[i])</span><br><span class="line">dp[i][<span class="number">1</span>] = max(dp[i-<span class="number">1</span>][<span class="number">1</span>], dp[i-<span class="number">1</span>][<span class="number">0</span>] - prices[i] - fee)</span><br></pre></td></tr></table></figure>
+<p>解释：相当于买入股票的价格升高了。<br>在第一个式子里减也是一样的，相当于卖出股票的价格减小了。<br>直接翻译成代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxProfit_with_fee</span><span class="params">(<span class="keyword">int</span>[] prices, <span class="keyword">int</span> fee)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = prices.length;</span><br><span class="line">    <span class="keyword">int</span> dp_i_0 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> dp_i_1 = Integer.MIN_VALUE;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> temp = dp_i_0;</span><br><span class="line">        dp_i_0 = Math.max(dp_i_0, dp_i_1 + prices[i]);</span><br><span class="line">        dp_i_1 = Math.max(dp_i_1, temp - prices[i] - fee);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp_i_0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-5-k-2"><a href="#3-5-k-2" class="headerlink" title="3.5 k = 2"></a>3.5 k = 2</h4><p>k = 2 和前面题目的情况稍微不同，因为上面的情况都和 k 的关系不太大。要么 k 是正无穷，状态转移和 k 没关系了；要么 k = 1，跟 k = 0 这个 base case 挨得近，最后也没有存在感。</p>
+<p>这道题 k = 2 和后面要讲的 k 是任意正整数的情况中，对 k 的处理就凸显出来了。我们直接写代码，边写边分析原因。</p>
+<p>原始的动态转移方程，没有可化简的地方</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dp[i][k][<span class="number">0</span>] = max(dp[i-<span class="number">1</span>][k][<span class="number">0</span>], dp[i-<span class="number">1</span>][k][<span class="number">1</span>] + prices[i])</span><br><span class="line">dp[i][k][<span class="number">1</span>] = max(dp[i-<span class="number">1</span>][k][<span class="number">1</span>], dp[i-<span class="number">1</span>][k-<span class="number">1</span>][<span class="number">0</span>] - prices[i])</span><br></pre></td></tr></table></figure>
+<p>按照之前的代码，我们可能想当然这样写代码（错误的）：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> k = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">int</span>[][][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n][k + <span class="number">1</span>][<span class="number">2</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    <span class="keyword">if</span> (i - <span class="number">1</span> == -<span class="number">1</span>) &#123; <span class="comment">/* 处理一下 base case*/</span> &#125;</span><br><span class="line">    dp[i][k][<span class="number">0</span>] = Math.max(dp[i-<span class="number">1</span>][k][<span class="number">0</span>], dp[i-<span class="number">1</span>][k][<span class="number">1</span>] + prices[i]);</span><br><span class="line">    dp[i][k][<span class="number">1</span>] = Math.max(dp[i-<span class="number">1</span>][k][<span class="number">1</span>], dp[i-<span class="number">1</span>][k-<span class="number">1</span>][<span class="number">0</span>] - prices[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> dp[n - <span class="number">1</span>][k][<span class="number">0</span>];</span><br></pre></td></tr></table></figure>
+<p>为什么错误？我这不是照着状态转移方程写的吗？</p>
+<p>还记得前面总结的「穷举框架」吗？就是说我们必须穷举所有状态。其实我们之前的解法，都在穷举所有状态，只是之前的题目中 k 都被化简掉了。这道题由于没有消掉 k 的影响，所以必须要对 k 进行穷举：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> max_k = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">int</span>[][][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n][max_k + <span class="number">1</span>][<span class="number">2</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> k = max_k; k &gt;= <span class="number">1</span>; k--) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i - <span class="number">1</span> == -<span class="number">1</span>) &#123; <span class="comment">/*处理 base case */</span> &#125;</span><br><span class="line">        dp[i][k][<span class="number">0</span>] = max(dp[i-<span class="number">1</span>][k][<span class="number">0</span>], dp[i-<span class="number">1</span>][k][<span class="number">1</span>] + prices[i]);</span><br><span class="line">        dp[i][k][<span class="number">1</span>] = max(dp[i-<span class="number">1</span>][k][<span class="number">1</span>], dp[i-<span class="number">1</span>][k-<span class="number">1</span>][<span class="number">0</span>] - prices[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 穷举了 n × max_k × 2 个状态，正确。</span></span><br><span class="line"><span class="keyword">return</span> dp[n - <span class="number">1</span>][max_k][<span class="number">0</span>];</span><br></pre></td></tr></table></figure>
+<p>如果你不理解，可以返回第一点「穷举框架」重新阅读体会一下。</p>
+<p>这里 k 取值范围比较小，所以可以不用 for 循环，直接把 k = 1 和 2 的情况手动列举出来也可以：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">dp[i][<span class="number">2</span>][<span class="number">0</span>] = max(dp[i-<span class="number">1</span>][<span class="number">2</span>][<span class="number">0</span>], dp[i-<span class="number">1</span>][<span class="number">2</span>][<span class="number">1</span>] + prices[i])</span><br><span class="line">dp[i][<span class="number">2</span>][<span class="number">1</span>] = max(dp[i-<span class="number">1</span>][<span class="number">2</span>][<span class="number">1</span>], dp[i-<span class="number">1</span>][<span class="number">1</span>][<span class="number">0</span>] - prices[i])</span><br><span class="line">dp[i][<span class="number">1</span>][<span class="number">0</span>] = max(dp[i-<span class="number">1</span>][<span class="number">1</span>][<span class="number">0</span>], dp[i-<span class="number">1</span>][<span class="number">1</span>][<span class="number">1</span>] + prices[i])</span><br><span class="line">dp[i][<span class="number">1</span>][<span class="number">1</span>] = max(dp[i-<span class="number">1</span>][<span class="number">1</span>][<span class="number">1</span>], -prices[i])</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxProfit_k_2</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> dp_i10 = <span class="number">0</span>, dp_i11 = Integer.MIN_VALUE;</span><br><span class="line">    <span class="keyword">int</span> dp_i20 = <span class="number">0</span>, dp_i21 = Integer.MIN_VALUE;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> price : prices) &#123;</span><br><span class="line">        dp_i20 = Math.max(dp_i20, dp_i21 + price);</span><br><span class="line">        dp_i21 = Math.max(dp_i21, dp_i10 - price);</span><br><span class="line">        dp_i10 = Math.max(dp_i10, dp_i11 + price);</span><br><span class="line">        dp_i11 = Math.max(dp_i11, -price);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp_i20;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有状态转移方程和含义明确的变量名指导，相信你很容易看懂。其实我们可以故弄玄虚，把上述四个变量换成 a, b, c, d。这样当别人看到你的代码时就会一头雾水，大惊失色，不得不对你肃然起敬。</p>
+<h4 id="3-6-k-any-integer"><a href="#3-6-k-any-integer" class="headerlink" title="3.6 k = any integer"></a>3.6 k = any integer</h4><p>有了上一题 k = 2 的铺垫，这题应该和上一题的第一个解法没啥区别。但是出现了一个超内存的错误，原来是传入的 k 值会非常大，dp 数组太大了。现在想想，交易次数 k 最多有多大呢？</p>
+<p>一次交易由买入和卖出构成，至少需要两天。所以说有效的限制 k 应该不超过 n/2，如果超过，就没有约束作用了，相当于 k = +infinity。这种情况是之前解决过的。</p>
+<p>直接把之前的代码重用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxProfit_k_any</span><span class="params">(<span class="keyword">int</span> max_k, <span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = prices.length;</span><br><span class="line">    <span class="keyword">if</span> (max_k &gt; n / <span class="number">2</span>) </span><br><span class="line">        <span class="keyword">return</span> maxProfit_k_inf(prices);</span><br><span class="line">	<span class="keyword">int</span>[][][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n][max_k + <span class="number">1</span>][<span class="number">2</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) </span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> k = max_k; k &gt;= <span class="number">1</span>; k--) &#123;</span><br><span class="line">      	  	<span class="keyword">if</span> (i - <span class="number">1</span> == -<span class="number">1</span>) &#123; <span class="comment">/* 处理 base case */</span> &#125;</span><br><span class="line">        	dp[i][k][<span class="number">0</span>] = max(dp[i-<span class="number">1</span>][k][<span class="number">0</span>], dp[i-<span class="number">1</span>][k][<span class="number">1</span>] + prices[i]);</span><br><span class="line">        	dp[i][k][<span class="number">1</span>] = max(dp[i-<span class="number">1</span>][k][<span class="number">1</span>], dp[i-<span class="number">1</span>][k-<span class="number">1</span>][<span class="number">0</span>] - prices[i]);     </span><br><span class="line">    &#125;</span><br><span class="line">	<span class="keyword">return</span> dp[n - <span class="number">1</span>][max_k][<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>至此，6 道题目通过一个状态转移方程全部解决。</p>
+<h3 id="4-最后总结"><a href="#4-最后总结" class="headerlink" title="4 最后总结"></a>4 最后总结</h3><p>本文给大家讲了如何通过状态转移的方法解决复杂的问题，用一个状态转移方程秒杀了 6 道股票买卖问题，现在想想，其实也不算难对吧？这已经属于动态规划问题中较困难的了。</p>
+<p>关键就在于列举出所有可能的「状态」，然后想想怎么穷举更新这些「状态」。一般用一个多维 dp 数组储存这些状态，从 base case 开始向后推进，推进到最后的状态，就是我们想要的答案。想想这个过程，你是不是有点理解「动态规划」这个名词的意义了呢？</p>
+<p>具体到股票买卖问题，我们发现了三个状态，使用了一个三维数组，无非还是穷举 + 更新，不过我们可以说的高大上一点，这叫「三维 DP」，怕不怕？这个大实话一说，立刻显得你高人一等，名利双收有没有。</p>
+<p>所以，大家不要被各种高大上的名词吓到，再多的困难问题，奇技淫巧，也不过是基本套路的不断升级组合产生的。只要把住算法的底层原理，即可举一反三，逐个击破。</p>
+<h3 id="5-相关题目"><a href="#5-相关题目" class="headerlink" title="5 相关题目"></a>5 相关题目</h3><p>[买卖股票的最佳时机][<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/</a>]</p>
+<p>[买卖股票的最佳时机 II][<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/</a>]</p>
+<p>[买卖股票的最佳时机 III][<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/</a>]</p>
+<p>[买卖股票的最佳时机 IV][<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/</a>]</p>
+<p>[最佳买卖股票时机含冷冻期][<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/</a>]</p>
+<p>[买卖股票的最佳时机含手续费][<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/</a>]</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2020/03/09/六道股票问题/">六道股票问题</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Louis</a></p>
+        <p><span>发布时间:</span>2020-03-09, 11:33:29</p>
+        <p><span>最后更新:</span>2021-08-17, 02:16:27</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2020/03/09/六道股票问题/" title="六道股票问题">https://www.jiangluyu.com/2020/03/09/六道股票问题/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://www.jiangluyu.com/2020/03/09/六道股票问题/　　作者: Louis" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2020/03/20/Linux学习笔记/">
+                    Linux学习笔记
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2020/03/08/M322-零钱兑换/">
+                    M322-零钱兑换
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-背景"><span class="toc-number">1.</span> <span class="toc-text">0 背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-穷举框架"><span class="toc-number">2.</span> <span class="toc-text">1 穷举框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-状态转移框架"><span class="toc-number">3.</span> <span class="toc-text">2 状态转移框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-秒杀题目"><span class="toc-number">4.</span> <span class="toc-text">3 秒杀题目</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-k-1"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 k = 1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-k-infinity"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 k = +infinity</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-k-infinity-with-cooldown"><span class="toc-number">4.3.</span> <span class="toc-text">3.3 k = +infinity with cooldown</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-k-infinity-with-fee"><span class="toc-number">4.4.</span> <span class="toc-text">3.4 k = +infinity with fee</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-k-2"><span class="toc-number">4.5.</span> <span class="toc-text">3.5 k = 2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-k-any-integer"><span class="toc-number">4.6.</span> <span class="toc-text">3.6 k = any integer</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-最后总结"><span class="toc-number">5.</span> <span class="toc-text">4 最后总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-相关题目"><span class="toc-number">6.</span> <span class="toc-text">5 相关题目</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-6 i,
+        .toc-level-6 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+
+
+    
+	    <div id="gitalk-container"></div> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+
+var gitalk = new Gitalk({
+  clientID: '7b49f18bbd8123c6c1ac',
+  clientSecret: 'a3066cc6ee97023cc0a4074dbc44e8e3685fde55',
+  repo: 'Comment-Repo',
+  owner: 'Jiangluyu',
+  admin: ['Jiangluyu'],
+  id: 'Mon Mar 09 2020 11:33:29 GMT+0800',      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
+</script>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2020/03/20/Linux学习笔记/" title="上一篇: Linux学习笔记">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2020/03/08/M322-零钱兑换/" title="下一篇: M322-零钱兑换">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/02/20/temp/">temp</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/20/Linux学习笔记/">Linux学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/09/六道股票问题/">六道股票问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/08/M322-零钱兑换/">M322-零钱兑换</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/02/常用排序算法详解/">常用排序算法详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/29/今日母亲为我理发/">今日母亲为我理发</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/27/C++set/">C++set详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/21/E021-合并两个有序链表/">E021-合并两个有序链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/21/电脑维修实用问题汇总/">电脑维修实用问题汇总</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/16/形近词辨析/">形近词辨析</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/15/独立口语思路练习/">独立口语思路练习</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/15/托福答题模板（自用）/">托福答题模板（自用）</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/15/托福口语语料积累（更新中）/">托福口语语料积累（更新中）</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/15/关于hexo遇到的问题汇总/">关于hexo遇到的问题汇总</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/E867-转置矩阵/">E867-转置矩阵</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/E206-反转链表/">E206-反转链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/04/少少/">少少</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/01/不问归期来路/">不问归期来路</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display: inline'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display: inline'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+	<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+	<script>
+		var now = new Date(); 
+		function createtime() { 
+			var grt= new Date("01/01/2019 12:00:00");//在此处修改你的建站时间
+			now.setTime(now.getTime()+250); 
+			days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+			hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+			if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+			mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+			seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+			snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+			document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" 天 "; 
+			document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+		} 
+	setInterval("createtime()",250);
+	</script>
+	</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+	<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+            
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+	if (window.mermaid) {
+	  mermaid.initialize({theme: 'forest'});
+	}
+  </script>
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","hOffset":50,"width":100,"height":200},"mobile":{"show":true,"scale":0.6},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

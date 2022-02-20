@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Louis">
+
+
+
+<meta name="description" content="一些迁移、安装hexo时遇到的问题及解决方法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于hexo遇到的问题汇总">
+<meta property="og:url" content="https://www.jiangluyu.com/2020/02/15/关于hexo遇到的问题汇总/index.html">
+<meta property="og:site_name" content="Louis睡醒了">
+<meta property="og:description" content="一些迁移、安装hexo时遇到的问题及解决方法。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-08-16T18:16:27.722Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于hexo遇到的问题汇总">
+<meta name="twitter:description" content="一些迁移、安装hexo时遇到的问题及解决方法。">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Louis睡醒了" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>关于hexo遇到的问题汇总 | Louis睡醒了</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/cat.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Louis</a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/categories/LeetCode">LeetCode</a></li>
+                        
+                            <li><a href="/categories/TOEFL">TOEFL</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:945803847@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" href="http://weibo.com/louisaimoyu" title="新浪微博"></a>
+                            
+                                <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=945803847&site=qq&menu=yes" title="QQ"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Louis</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/cat.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Louis</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/LeetCode">LeetCode</a></li>
+                
+                    <li><a href="/categories/TOEFL">TOEFL</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:945803847@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/louisaimoyu" title="新浪微博"></a>
+                            
+                                <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=945803847&site=qq&menu=yes" title="QQ"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-关于hexo遇到的问题汇总" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2020/02/15/关于hexo遇到的问题汇总/" class="article-date">
+      <time datetime="2020-02-15T11:02:17.000Z" itemprop="datePublished">2020-02-15</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于hexo遇到的问题汇总
+    </h1>
+  
+
+		
+		   <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">999字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">5分</span>
+      </span>
+    </span>
+</div>
+
+		
+      </header>
+      
+      <div class="article-info article-info-post" style="margin-top:10px">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/bugfix/">bugfix</a>
+    </div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>一些迁移、安装hexo时遇到的问题及解决方法。</p>
+<a id="more"></a>
+<h3 id="Q1-gyp-No-Xcode-or-CLT-version-detected"><a href="#Q1-gyp-No-Xcode-or-CLT-version-detected" class="headerlink" title="Q1: gyp: No Xcode or CLT version detected!"></a>Q1: gyp: No Xcode or CLT version detected!</h3><p>近日在将hexo从win迁移到mac时，卡在了npm安装上：</p>
+<p>运行如下命令时：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>出现如下错误：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&gt; node install</span><br><span class="line"></span><br><span class="line">node-pre-gyp WARN Tried to download(404): https://fsevents-binaries.s3-us-west-2.amazonaws.com/v1.2.4/fse-v1.2.4-node-v67-darwin-x64.tar.gz</span><br><span class="line">node-pre-gyp WARN Pre-built binaries not found <span class="keyword">for</span> fsevents@1.2.4 and node@11.14.0 (node-v67 ABI, unknown) (falling back to <span class="built_in">source</span> compile with node-gyp)</span><br><span class="line">No receipt <span class="keyword">for</span> <span class="string">'com.apple.pkg.CLTools_Executables'</span> found at <span class="string">'/'</span>.</span><br><span class="line"></span><br><span class="line">No receipt <span class="keyword">for</span> <span class="string">'com.apple.pkg.DeveloperToolsCLILeo'</span> found at <span class="string">'/'</span>.</span><br><span class="line"></span><br><span class="line">No receipt <span class="keyword">for</span> <span class="string">'com.apple.pkg.DeveloperToolsCLI'</span> found at <span class="string">'/'</span>.</span><br><span class="line"></span><br><span class="line">gyp: No Xcode or CLT version detected!</span><br><span class="line">gyp ERR! configure error</span><br><span class="line">gyp ERR! stack Error: `gyp` failed with <span class="built_in">exit</span> code: 1</span><br><span class="line">gyp ERR! stack     at ChildProcess.onCpExit (/usr/<span class="built_in">local</span>/lib/node_modules/npm/node_modules/node-gyp/lib/configure.js:351:16)</span><br><span class="line">gyp ERR! stack     at ChildProcess.emit (events.js:193:13)</span><br><span class="line">gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:255:12)</span><br><span class="line">gyp ERR! System Darwin 19.3.0</span><br><span class="line">gyp ERR! <span class="built_in">command</span> <span class="string">"/usr/local/Cellar/node/11.14.0/bin/node"</span> <span class="string">"/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js"</span> <span class="string">"configure"</span> <span class="string">"--fallback-to-build"</span> <span class="string">"--module=/Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents/lib/binding/Release/node-v67-darwin-x64/fse.node"</span> <span class="string">"--module_name=fse"</span> <span class="string">"--module_path=/Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents/lib/binding/Release/node-v67-darwin-x64"</span> <span class="string">"--napi_version=4"</span> <span class="string">"--node_abi_napi=napi"</span></span><br><span class="line">gyp ERR! cwd /Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents</span><br><span class="line">gyp ERR! node -v v11.14.0</span><br><span class="line">gyp ERR! node-gyp -v v5.0.7</span><br><span class="line">gyp ERR! not ok</span><br><span class="line">node-pre-gyp ERR! build error</span><br><span class="line">node-pre-gyp ERR! stack Error: Failed to execute <span class="string">'/usr/local/Cellar/node/11.14.0/bin/node /usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js configure --fallback-to-build --module=/Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents/lib/binding/Release/node-v67-darwin-x64/fse.node --module_name=fse --module_path=/Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents/lib/binding/Release/node-v67-darwin-x64 --napi_version=4 --node_abi_napi=napi'</span> (1)</span><br><span class="line">node-pre-gyp ERR! stack     at ChildProcess.&lt;anonymous&gt; (/Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents/node_modules/node-pre-gyp/lib/util/compile.js:83:29)</span><br><span class="line">node-pre-gyp ERR! stack     at ChildProcess.emit (events.js:193:13)</span><br><span class="line">node-pre-gyp ERR! stack     at maybeClose (internal/child_process.js:999:16)</span><br><span class="line">node-pre-gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:266:5)</span><br><span class="line">node-pre-gyp ERR! System Darwin 19.3.0</span><br><span class="line">node-pre-gyp ERR! <span class="built_in">command</span> <span class="string">"/usr/local/Cellar/node/11.14.0/bin/node"</span> <span class="string">"/Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents/node_modules/node-pre-gyp/bin/node-pre-gyp"</span> <span class="string">"install"</span> <span class="string">"--fallback-to-build"</span></span><br><span class="line">node-pre-gyp ERR! cwd /Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents</span><br><span class="line">node-pre-gyp ERR! node -v v11.14.0</span><br><span class="line">node-pre-gyp ERR! node-pre-gyp -v v0.10.0</span><br><span class="line">node-pre-gyp ERR! not ok</span><br><span class="line">Failed to execute <span class="string">'/usr/local/Cellar/node/11.14.0/bin/node /usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js configure --fallback-to-build --module=/Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents/lib/binding/Release/node-v67-darwin-x64/fse.node --module_name=fse --module_path=/Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents/lib/binding/Release/node-v67-darwin-x64 --napi_version=4 --node_abi_napi=napi'</span> (1)</span><br><span class="line">...以下省略</span><br></pre></td></tr></table></figure>
+<p>实际上，在尝试过使用如下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
+<p>进行修复时，并不成功。</p>
+<p><strong>解决方案如下：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rm -rf $(xcode-select -<span class="built_in">print</span>-path)</span><br><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
+<h3 id="Q2-hexo迁移"><a href="#Q2-hexo迁移" class="headerlink" title="Q2: hexo迁移"></a>Q2: hexo迁移</h3><p>去年在原先的笔记本上建立的项目，彼时对github了解甚少，没想过在不同电脑上更新的需求，甚至还因此断更了一年（笑），迁移步骤如下：</p>
+<p>ssh配置好后，克隆github上yourname.github.io项目到本地：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yourname/yourname.github.io.git</span><br></pre></td></tr></table></figure>
+<p>删除除了.git以外的所有文件；</p>
+<p>将blog源文件中的所有文件复制到xxx.github.io的文件夹中，并将theme文件夹中各个主题中的.git文件夹删除；</p>
+<p>创建hexo分支，并切换到hexo：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b hexo</span><br></pre></td></tr></table></figure>
+<p>将复制的文件提交到暂存区，并提交，推送至github：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">'new branch source files'</span></span><br><span class="line">git push --<span class="built_in">set</span>-upstream origin hexo</span><br></pre></td></tr></table></figure>
+<p>更新blog时，只需要照常即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+<p>切换至新电脑时，只需要执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b hexo https://github.com/yourname/yourname.github.io</span><br></pre></td></tr></table></figure>
+<p>在ssh配置正确，npm安装依赖后，即可更新。</p>
+<h3 id="Q3-无法备份-themes"><a href="#Q3-无法备份-themes" class="headerlink" title="Q3: 无法备份/themes"></a>Q3: 无法备份/themes</h3><p>在删掉themes中的所有主题的.git之后，发现使用如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git comment -m <span class="string">'write your comment here'</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<p>依然无法成功将自己修改过的主题提交到github上。</p>
+<h5 id="解决方案如下："><a href="#解决方案如下：" class="headerlink" title="解决方案如下："></a>解决方案如下：</h5><p>在确保删除了各个主题的.git文件后，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached -r themes</span><br><span class="line">git add themes</span><br><span class="line">git commit -m <span class="string">'write your comment here'</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2020/02/15/关于hexo遇到的问题汇总/">关于hexo遇到的问题汇总</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Louis</a></p>
+        <p><span>发布时间:</span>2020-02-15, 19:02:17</p>
+        <p><span>最后更新:</span>2021-08-17, 02:16:27</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2020/02/15/关于hexo遇到的问题汇总/" title="关于hexo遇到的问题汇总">https://www.jiangluyu.com/2020/02/15/关于hexo遇到的问题汇总/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://www.jiangluyu.com/2020/02/15/关于hexo遇到的问题汇总/　　作者: Louis" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2020/02/15/托福口语语料积累（更新中）/">
+                    托福口语语料积累（更新中）
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2020/02/14/E867-转置矩阵/">
+                    E867-转置矩阵
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Q1-gyp-No-Xcode-or-CLT-version-detected"><span class="toc-number">1.</span> <span class="toc-text">Q1: gyp: No Xcode or CLT version detected!</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q2-hexo迁移"><span class="toc-number">2.</span> <span class="toc-text">Q2: hexo迁移</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q3-无法备份-themes"><span class="toc-number">3.</span> <span class="toc-text">Q3: 无法备份/themes</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#解决方案如下："><span class="toc-number">3.0.1.</span> <span class="toc-text">解决方案如下：</span></a></li></ol></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-6 i,
+        .toc-level-6 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+
+
+    
+	    <div id="gitalk-container"></div> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+
+var gitalk = new Gitalk({
+  clientID: '7b49f18bbd8123c6c1ac',
+  clientSecret: 'a3066cc6ee97023cc0a4074dbc44e8e3685fde55',
+  repo: 'Comment-Repo',
+  owner: 'Jiangluyu',
+  admin: ['Jiangluyu'],
+  id: 'Sat Feb 15 2020 19:02:17 GMT+0800',      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
+</script>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2020/02/15/托福口语语料积累（更新中）/" title="上一篇: 托福口语语料积累（更新中）">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2020/02/14/E867-转置矩阵/" title="下一篇: E867-转置矩阵">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/02/20/temp/">temp</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/20/Linux学习笔记/">Linux学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/09/六道股票问题/">六道股票问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/08/M322-零钱兑换/">M322-零钱兑换</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/02/常用排序算法详解/">常用排序算法详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/29/今日母亲为我理发/">今日母亲为我理发</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/27/C++set/">C++set详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/21/E021-合并两个有序链表/">E021-合并两个有序链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/21/电脑维修实用问题汇总/">电脑维修实用问题汇总</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/16/形近词辨析/">形近词辨析</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/15/独立口语思路练习/">独立口语思路练习</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/15/托福答题模板（自用）/">托福答题模板（自用）</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/15/托福口语语料积累（更新中）/">托福口语语料积累（更新中）</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/15/关于hexo遇到的问题汇总/">关于hexo遇到的问题汇总</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/E867-转置矩阵/">E867-转置矩阵</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/E206-反转链表/">E206-反转链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/04/少少/">少少</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/01/不问归期来路/">不问归期来路</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display: inline'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display: inline'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+	<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+	<script>
+		var now = new Date(); 
+		function createtime() { 
+			var grt= new Date("01/01/2019 12:00:00");//在此处修改你的建站时间
+			now.setTime(now.getTime()+250); 
+			days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+			hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+			if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+			mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+			seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+			snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+			document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" 天 "; 
+			document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+		} 
+	setInterval("createtime()",250);
+	</script>
+	</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+	<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+            
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+	if (window.mermaid) {
+	  mermaid.initialize({theme: 'forest'});
+	}
+  </script>
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","hOffset":50,"width":100,"height":200},"mobile":{"show":true,"scale":0.6},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
