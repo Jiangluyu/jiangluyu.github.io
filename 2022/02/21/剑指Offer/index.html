@@ -16,17 +16,19 @@
 
 
 <meta name="description" content="分类整理剑指Offer题目思路。">
-<meta name="keywords" content="LeetCode">
+<meta name="keywords" content="LeetCode,C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="剑指Offer">
 <meta property="og:url" content="https://www.jiangluyu.xyz/2022/02/21/剑指Offer/index.html">
 <meta property="og:site_name" content="Louis睡醒了">
 <meta property="og:description" content="分类整理剑指Offer题目思路。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-02-20T16:39:19.247Z">
+<meta property="og:image" content="https://pic.leetcode-cn.com/1599584901-xoiGEQ-Picture9.png">
+<meta property="og:updated_time" content="2022-02-22T18:21:18.117Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="剑指Offer">
 <meta name="twitter:description" content="分类整理剑指Offer题目思路。">
+<meta name="twitter:image" content="https://pic.leetcode-cn.com/1599584901-xoiGEQ-Picture9.png">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -236,7 +238,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.4k字</span>
+        <span class="post-count">3k字</span>
       </span>
     </span>
 
@@ -245,7 +247,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">5分</span>
+        <span class="post-count">12分</span>
       </span>
     </span>
 </div>
@@ -262,7 +264,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -298,11 +300,11 @@
 <p>第三次遍历：剥离A’-&gt;B’-&gt;C’，恢复原来的A-&gt;B-&gt;C</p>
 <hr>
 <h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="E05-替换空格"><a href="#E05-替换空格" class="headerlink" title="E05 替换空格"></a>E05 替换空格</h3><p><strong>创建新数组：</strong></p>
-<p>时间空间均为O(N)</p>
+<p>时间空间均为O(N)。</p>
 <p><strong>原地修改：</strong></p>
 <p>（C++ string可变）</p>
-<p>统计空格数 -&gt; 扩展string长度 str.resize() -&gt; 倒序插入，left指向原字符串末尾，right指向新字符串末尾，如果str[left] == ‘ ‘，str[right~rigfht-2]替换为%20，right-=2，否则复制str[left]内容</p>
-<p>空间O(1)，时间O(N)</p>
+<p>统计空格数 -&gt; 扩展string长度 str.resize() -&gt; 倒序插入，left指向原字符串末尾，right指向新字符串末尾，如果str[left] == ‘ ‘，str[right~rigfht-2]替换为%20，right-=2，否则复制str[left]内容。</p>
+<p>空间O(1)，时间O(N)。</p>
 <hr>
 <h3 id="E58-2-左旋转字符串"><a href="#E58-2-左旋转字符串" class="headerlink" title="E58-2 左旋转字符串"></a>E58-2 左旋转字符串</h3><p><strong>允许额外空间：</strong></p>
 <p>return (s+s).substr(n, s.size());</p>
@@ -315,17 +317,17 @@
 <p>1~n-1的数字，意味着一对多的映射。</p>
 <p>遍历，当nums[i] == i时，递增；</p>
 <p>如果nums[nums[i]] = i，即两个数字相等，则break，</p>
-<p>否则交换nums[i]和nums[nums[i]]，重新比较nums[i]与i是否满足继续向后的条件</p>
+<p>否则交换nums[i]和nums[nums[i]]，重新比较nums[i]与i是否满足继续向后的条件。</p>
 <hr>
 <h3 id="E53-1-在排序数组中查找数字"><a href="#E53-1-在排序数组中查找数字" class="headerlink" title="E53-1 在排序数组中查找数字"></a>E53-1 在排序数组中查找数字</h3><p><strong>看到排序数组一般想到二分：</strong></p>
-<p>两次二分法：第一次找左边界，第二次找右边界</p>
+<p>两次二分法：第一次找左边界，第二次找右边界。</p>
 <p>这里可以优化：找target&amp;target-1（是否在数组里不重要），返回right index，结果为bs(target) - bs(target - 1 )</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binary_search</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> right = nums.size() - <span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 想不清楚可以举个简单例子画图</span></span><br><span class="line">    <span class="comment">// 注意'/'向下取整</span></span><br><span class="line">    <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (nums[mid] == target) &#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[mid] &gt; target) &#123;</span><br><span class="line">            right = mid - <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>; <span class="comment">// 没找到</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="E53-2-0-n-1中缺失的数字"><a href="#E53-2-0-n-1中缺失的数字" class="headerlink" title="E53-2 0~n-1中缺失的数字"></a>E53-2 0~n-1中缺失的数字</h3><p>排序数组首先考虑二分</p>
 <p>nums[mid] == mid时，说明缺失值在[mid + 1, right]</p>
 <p>nums[mid] &gt; mid时，说明缺失值在[left, mid]</p>
-<p>最终返回right + 1即可，本题也可以返回left</p>
+<p>最终返回right + 1即可，本题也可以返回left。</p>
 <hr>
 <h3 id="M04-二维数组中的查找"><a href="#M04-二维数组中的查找" class="headerlink" title="M04 二维数组中的查找"></a>M04 二维数组中的查找</h3><p><strong>暴力：</strong></p>
 <p>面试官：“今天就到这里吧:monkey:”</p>
@@ -425,14 +427,132 @@
 <p>对称的二叉树满足的条件为左子树的左节点 = 右子树的右节点，从上往下递归</p>
 <p>故对于root来说，只需要比较root-&gt;left，root-&gt;right，对于递归函数来说，只需要继续比较root-&gt;left-&gt;left，root-&gt;right-&gt;right以及root-&gt;left-&gt;right，root-&gt;right-&gt;left</p>
 <hr>
+<h3 id="M12-矩阵中的路径"><a href="#M12-矩阵中的路径" class="headerlink" title="M12 矩阵中的路径"></a>M12 矩阵中的路径</h3><p><strong>递归</strong>：</p>
+<p>对网格中的每个字母都进行从word[0]开始的dfs，如果满足，则将该位置置为’\0’，继续向上下左右探，返回前修改回word[pos]即可</p>
+<hr>
+<h3 id="M13-机器人的运动范围"><a href="#M13-机器人的运动范围" class="headerlink" title="M13 机器人的运动范围"></a>M13 机器人的运动范围</h3><p><strong>递归</strong>：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">movingCount</span><span class="params">(<span class="keyword">int</span> m, <span class="keyword">int</span> n, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        row_max = m - <span class="number">1</span>;</span><br><span class="line">        col_max = n - <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;&gt; flag(m, <span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;(n, <span class="literal">false</span>));</span><br><span class="line">        dfs(<span class="number">0</span>, <span class="number">0</span>, k, ans, flag);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> row_max;</span><br><span class="line">    <span class="keyword">int</span> col_max;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">calc_sum</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (a) &#123;</span><br><span class="line">            res += a % <span class="number">10</span>;</span><br><span class="line">            a /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (b) &#123;</span><br><span class="line">            res += b % <span class="number">10</span>;</span><br><span class="line">            b /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> row, <span class="keyword">int</span> col, <span class="keyword">int</span> k, <span class="keyword">int</span>&amp; sum, <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;&gt;&amp; flag)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (row &lt; <span class="number">0</span> || row &gt; row_max || col &lt; <span class="number">0</span> || col &gt; col_max || k &lt; calc_sum(row, col) || flag[row][col]) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        sum++;</span><br><span class="line">        flag[row][col] = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        dfs(row + <span class="number">1</span>, col, k, sum, flag);</span><br><span class="line">        dfs(row, col + <span class="number">1</span>, k, sum, flag);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>注：和M12基本框架一致，注意二维vector的初始化方式及传参方式，及calc_sum的实现方式</p>
+<hr>
+<h3 id="M34-二叉树中和为某一值的路径"><a href="#M34-二叉树中和为某一值的路径" class="headerlink" title="M34 二叉树中和为某一值的路径"></a>M34 二叉树中和为某一值的路径</h3><p><strong>递归</strong>：</p>
+<p>深度优先搜索，每当达到叶节点时即计算路径和，若等于target则记录，否则往回退，删除当前节点值</p>
+<p>回溯的基本思路一致</p>
+<hr>
+<h3 id="M36-二叉搜索树与双向链表"><a href="#M36-二叉搜索树与双向链表" class="headerlink" title="M36 二叉搜索树与双向链表"></a>M36 二叉搜索树与双向链表</h3><p><strong>递归</strong>：</p>
+<p>BST所以中序遍历可以保证递增，注意题目要求最好就地（实测用vector也通过了）</p>
+<p>注意可以用全局变量来记录prev&amp;head，当dfs结束时，head为首，prev为末，让其完成双向循环链表</p>
+<hr>
+<h3 id="E54-二叉搜索树的第k大节点"><a href="#E54-二叉搜索树的第k大节点" class="headerlink" title="E54 二叉搜索树的第k大节点"></a>E54 二叉搜索树的第k大节点</h3><p><strong>递归</strong>：</p>
+<p>后序遍历，找到第k个值即返回</p>
+<hr>
 <h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><h3 id="E10-1-斐波那契数列"><a href="#E10-1-斐波那契数列" class="headerlink" title="E10-1 斐波那契数列"></a>E10-1 斐波那契数列</h3><p><strong>递归：不谈</strong></p>
 <p><strong>动态规划：</strong>申请一个n+1长度的vector，注意类型int不够，dp[i] = dp[i-1] + dp[i-2]；</p>
 <p><strong>动态规划改进：</strong>仅更新三个数字a, b, sum即可，因为前面的计算过程无需再用到</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    sum = (a + b) % <span class="number">1000000007</span>;</span><br><span class="line">    a = b;</span><br><span class="line">    b = sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> a;</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="E10-2-青蛙跳台阶问题"><a href="#E10-2-青蛙跳台阶问题" class="headerlink" title="E10-2 青蛙跳台阶问题"></a>E10-2 青蛙跳台阶问题</h3><p><strong>动态规划</strong>：想清楚n阶的方法数 = n-1阶的方法数+n-2阶的方法数，即初始值为1,1的斐波那契数列</p>
+<h3 id="E10-2-青蛙跳台阶问题"><a href="#E10-2-青蛙跳台阶问题" class="headerlink" title="E10-2 青蛙跳台阶问题"></a>E10-2 青蛙跳台阶问题</h3><p><strong>动态规划</strong>：想清楚n阶的方法数 = n-1阶的方法数+n-2阶的方法数，即初始值为1, 1的斐波那契数列</p>
 <hr>
-<h3 id="M63-股票的最大利润"><a href="#M63-股票的最大利润" class="headerlink" title="M63 股票的最大利润"></a>M63 股票的最大利润</h3>
+<h3 id="M63-股票的最大利润"><a href="#M63-股票的最大利润" class="headerlink" title="M63 股票的最大利润"></a>M63 股票的最大利润</h3><p><strong>动态规划</strong>：贴个链接：<a href="http://www.jiangluyu.xyz/2020/03/09/%E5%85%AD%E9%81%93%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98/">六道股票问题</a></p>
+<hr>
+<h3 id="E42-连续子数组的最大和"><a href="#E42-连续子数组的最大和" class="headerlink" title="E42 连续子数组的最大和"></a>E42 连续子数组的最大和</h3><p><strong>动态规划</strong>：</p>
+<p>基础状态：</p>
+<script type="math/tex; mode=display">
+dp[0] = nums[0]</script><p>状态转移方程：</p>
+<script type="math/tex; mode=display">
+dp[i] = \begin{cases}
+dp[i-1] + nums[i], dp[i-1] \ge 0 \\
+nums[i], dp[i-1] \lt 0 \\
+\end{cases}</script><hr>
+<h3 id="M47-礼物的最大价值"><a href="#M47-礼物的最大价值" class="headerlink" title="M47 礼物的最大价值"></a>M47 礼物的最大价值</h3><p><strong>动态规划</strong>：</p>
+<p>基础状态：</p>
+<script type="math/tex; mode=display">
+dp[0][0] = grid[0][0]</script><p>状态转移方程：</p>
+<script type="math/tex; mode=display">
+dp[i][j] = \begin{cases}
+dp[i][j - 1] + grid[i][j], i = 0, j > 0 \\
+dp[i - 1][j] + grid[i][j], j = 0, i > 0 \\
+max(dp[i - 1][j], dp[i][j - 1]) + grid[i][j], i > 0, j > 0
+
+\end{cases}</script><hr>
+<h3 id="M46-把数字翻译成字符串"><a href="#M46-把数字翻译成字符串" class="headerlink" title="M46 把数字翻译成字符串"></a>M46 把数字翻译成字符串</h3><p><strong>动态规划</strong>：注意06只能翻译为’af’，0无法参与组合</p>
+<p>基础状态：</p>
+<script type="math/tex; mode=display">
+dp[0] = dp[1] = 1</script><p>状态转移方程：</p>
+<script type="math/tex; mode=display">
+dp[i] = \begin{cases}
+dp[i - 1], atoi(num.substr(i - 1, 2).c\_str) \ge 26 || num[i - 1] - '0' = 0, i \ge 2 \\
+dp[i - 1] + dp[i - 2], atoi(num.substr(i - 1, 2).c\_str) \lt 26 \&\& num[i - 1] - '0' \ne 0, i \ge 2 \\
+\end{cases}</script><hr>
+<h3 id="M48-最长不含重复字符的子字符串"><a href="#M48-最长不含重复字符的子字符串" class="headerlink" title="M48 最长不含重复字符的子字符串"></a>M48 最长不含重复字符的子字符串</h3><p><strong>动态规划</strong>：</p>
+<p>基础状态：</p>
+<script type="math/tex; mode=display">
+dp[0] = 1</script><p>状态转移方程：</p>
+<script type="math/tex; mode=display">
+dp[i] = \begin{cases}
+dp[i - 1] + 1, if \ s[i]\  never \ shows \ up \\
+min(dp[i - 1] + 1, i - map[s[i]]), if \ s[i] showed \ up \ before)
+\end{cases}</script><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s;</span><br><span class="line"><span class="built_in">unordered_map</span>&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt; refs;</span><br><span class="line">refs.count(s[i]) == <span class="number">0</span>; <span class="comment">//是否出现过</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h2><h3 id="E18-删除链表的节点"><a href="#E18-删除链表的节点" class="headerlink" title="E18 删除链表的节点"></a>E18 删除链表的节点</h3><p><strong>双指针</strong>：注意如果head是要删除的节点，直接返回head-&gt;next</p>
+<p>定义prev&amp;curr，如果curr是要删除的节点，则令prev-&gt;next = curr-&gt;next</p>
+<hr>
+<h3 id="E22-链表中倒数第k个节点"><a href="#E22-链表中倒数第k个节点" class="headerlink" title="E22 链表中倒数第k个节点"></a>E22 链表中倒数第k个节点</h3><p><strong>双指针</strong>：</p>
+<p>定义high&amp;low，让high先走k步，再让两者一起前进，直到high为nullptr，则返回low</p>
+<p><strong>队列</strong>：</p>
+<p>检查队列的size为k，全部push结束后，queue.front()即为答案</p>
+<hr>
+<h3 id="E25-合并两个排序的列表"><a href="#E25-合并两个排序的列表" class="headerlink" title="E25 合并两个排序的列表"></a>E25 合并两个排序的列表</h3><p><strong>哈希表</strong>：</p>
+<p>遍历A，再遍历B，查询哈希表内有无出现过A的节点</p>
+<p><strong>双指针</strong>：</p>
+<p>使用一个dummy node作为head，curr node标记当前位置。l1与l2中小的即作为curr-&gt;next，随后curr与l1/l2中的一个往后移动，直至有一方为null，curr-&gt;next把非空的剩下部分作为尾巴接上</p>
+<hr>
+<h3 id="E52-两个链表的第一个公共节点"><a href="#E52-两个链表的第一个公共节点" class="headerlink" title="E52 两个链表的第一个公共节点"></a>E52 两个链表的第一个公共节点</h3><p><strong>双指针</strong>：</p>
+<p>浪漫相遇，如果A走到头为null时，next为headB，B同理，直到它们相等，要么为相遇的第一个点，要么为null</p>
+<hr>
+<h3 id="E21-调整数组顺序使奇数位于偶数前面"><a href="#E21-调整数组顺序使奇数位于偶数前面" class="headerlink" title="E21 调整数组顺序使奇数位于偶数前面"></a>E21 调整数组顺序使奇数位于偶数前面</h3><p><strong>双指针</strong>：</p>
+<p>left从左往右搜索偶数，right从右往左搜索奇数，如越界或right&lt;left则直接返回nums，否则交换，并继续</p>
+<hr>
+<h3 id="E57-和为s的两个数字"><a href="#E57-和为s的两个数字" class="headerlink" title="E57 和为s的两个数字"></a>E57 和为s的两个数字</h3><p><strong>双指针</strong>：</p>
+<p>left从左往右，right从右往左，若sum &lt; target，则left++，若sum &gt; target，则right—，越界或left&gt;=right则停止</p>
+<hr>
+<h3 id="E58-1-翻转单词顺序"><a href="#E58-1-翻转单词顺序" class="headerlink" title="E58-1 翻转单词顺序"></a>E58-1 翻转单词顺序</h3><p><strong>双指针</strong>：</p>
+<p>j从右往左，找到第一个非空格字符（注意j&gt;=0），如果此时j小于0了，结束；i从j开始从右往左（同样i&gt;=0），找到第一个空格，将从i+1开始的j-i个字符添加到ans中（再加个空格），令i=j，重复至停止</p>
+<hr>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><h3 id="M45-把数组排成最小的数"><a href="#M45-把数组排成最小的数" class="headerlink" title="M45 把数组排成最小的数"></a>M45 把数组排成最小的数</h3><p><strong>排序：</strong></p>
+<p>利用字典序，使得<strong>string类型</strong>的a + b &lt; b + a</p>
+<hr>
+<h3 id="E61-扑克牌中的顺子"><a href="#E61-扑克牌中的顺子" class="headerlink" title="E61 扑克牌中的顺子"></a>E61 扑克牌中的顺子</h3><p><strong>排序</strong>：</p>
+<p>less\<int\>()，从小到大排，是顺子需要两个条件，第一不能有重复的牌，第二max-min要小于等于4（会小于是因为可能比如12300的情况出现，即实际顺子的最大/最小可以由joker代替）</p>
+<hr>
+<h3 id="E40-最小的k个数"><a href="#E40-最小的k个数" class="headerlink" title="E40 最小的k个数"></a>E40 最小的k个数</h3><p>贴个链接：<a href="http://www.jiangluyu.xyz/2020/03/02/%E5%B8%B8%E7%94%A8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/">排序算法详解</a></p>
+<p>TOPK问题最快的方法是基于快速排序:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">find_pivot</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> begin, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">        uniform_int_distribution&lt;<span class="keyword">unsigned</span>&gt; u(begin, end);</span><br><span class="line">        default_random_engine e;</span><br><span class="line">        <span class="keyword">return</span> u(e);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> begin, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> pivot = find_pivot(arr, begin, end);</span><br><span class="line">        swap(arr[begin], arr[pivot]);</span><br><span class="line">        <span class="keyword">int</span> left = begin;</span><br><span class="line">        <span class="keyword">int</span> right = end;</span><br><span class="line">        <span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">            <span class="keyword">while</span> (left &lt; right &amp;&amp; arr[right] &gt;= arr[begin]) &#123;</span><br><span class="line">                right--;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (left &lt; right &amp;&amp; arr[left] &lt;= arr[begin]) &#123;</span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (left &lt; right) &#123;</span><br><span class="line">                swap(arr[left], arr[right]);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                swap(arr[left], arr[begin]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> left;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">quick_sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> begin, <span class="keyword">int</span> end, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (begin &lt; end) &#123;</span><br><span class="line">            <span class="keyword">int</span> pivot_index = partition(arr, begin, end);</span><br><span class="line">            <span class="keyword">if</span> (pivot_index == k) &#123;</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (pivot_index &gt; k) &#123;</span><br><span class="line">                quick_sort(arr, begin, pivot_index - <span class="number">1</span>, k);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                quick_sort(arr, pivot_index + <span class="number">1</span>, end, k);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; getLeastNumbers(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> k) &#123;</span><br><span class="line">        quick_sort(arr, <span class="number">0</span>, arr.size() - <span class="number">1</span>, k);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.size(); i++) &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; arr[i] &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; ans = &#123;&amp;arr[<span class="number">0</span>], &amp;arr[<span class="number">0</span>] + k&#125;;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>区别在于，当下标为k时，无需再排序，而下标小于k时，只需要对右半部分排序，反之只需要对左半部分排序</p>
+<hr>
+<h3 id="H41-数据流中的中位数"><a href="#H41-数据流中的中位数" class="headerlink" title="H41 数据流中的中位数"></a>H41 数据流中的中位数</h3><p>这题是很少见的设计题，这里介绍一下堆这一数据结构。</p>
+<blockquote>
+<p>堆是一种基于「完全二叉树」的数据结构，可使用数组实现。以堆为原理的排序算法称为「堆排序」，基于堆实现的数据结构为「优先队列」。堆分为「大顶堆」和「小顶堆」，大（小）顶堆：任意节点的值不大于（小于）其父节点的值。</p>
+</blockquote>
+<p>最大堆，堆顶为最大元素；最小堆，堆顶为最小元素。</p>
+<p>如下图所示，为包含 <code>1, 4, 2, 6, 8</code> 元素的小顶堆。将堆（完全二叉树）中的结点按层编号，即可映射到右边的数组存储形式。</p>
+<div align="center"> <img src="https://pic.leetcode-cn.com/1599584901-xoiGEQ-Picture9.png"> </div>
+
+<p>在C++中，priority_queue即优先队列，本质实现就是堆（默认为最大堆）。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># priority_queue&lt;Type, Container, Functional&gt;</span><br><span class="line"></span><br><span class="line">priority_queue&lt;<span class="keyword">int</span>, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;, less&lt;<span class="keyword">int</span>&gt;&gt; minHeap;</span><br><span class="line">priority_queue&lt;<span class="keyword">int</span>, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;, greater&lt;<span class="keyword">int</span>&gt;&gt; maxHeap;</span><br></pre></td></tr></table></figure>
+<p>常用方法：</p>
+<p>与队列queue一致。</p>
+<p><strong>本题思路</strong>：</p>
+<p>当两堆的数据个数相等时候，左边堆添加元素。</p>
+<p>采用的方法不是直接将数据插入左边堆，而是将数据先插入右边堆，算法调整后</p>
+<p>将堆顶的数据插入到左边堆，这样保证左边堆插入的元素始终是右边堆的最小值。</p>
+<p>同理左边数据多，往右边堆添加数据的时候，先将数据放入左边堆，选出最大值放到右边堆中。</p>
+<p>返回时，若两堆数量相等，则返回堆顶元素之和；否则返回最大堆堆顶。</p>
+<p>注：返回double技巧（int*1.0)</p>
+<hr>
+<h2 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h2><h3 id="M14-2-剪绳子II"><a href="#M14-2-剪绳子II" class="headerlink" title="M14-2 剪绳子II"></a>M14-2 剪绳子II</h3><p><strong>数学证明</strong>：<a href="https://leetcode-cn.com/problems/jian-sheng-zi-ii-lcof/solution/mian-shi-ti-14-ii-jian-sheng-zi-iitan-xin-er-fen-f/410694">题解</a></p>
+<p><strong>贪心思想</strong>：由数学证明可知&lt;=3时不用剪，&gt;4时当剪成3每段的时候最优</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cuttingRope</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">3</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> n - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> ans = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> p = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line">    <span class="keyword">while</span> (n &gt; <span class="number">4</span>) &#123;</span><br><span class="line">        ans = ans * <span class="number">3</span> % p;</span><br><span class="line">        n -= <span class="number">3</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> n * ans % p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -443,7 +563,7 @@
         <p><span>本文标题:</span><a href="/2022/02/21/剑指Offer/">剑指Offer</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Louis</a></p>
         <p><span>发布时间:</span>2022-02-21, 00:32:00</p>
-        <p><span>最后更新:</span>2022-02-21, 00:39:19</p>
+        <p><span>最后更新:</span>2022-02-23, 02:21:18</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2022/02/21/剑指Offer/" title="剑指Offer">https://www.jiangluyu.xyz/2022/02/21/剑指Offer/</a>
             <span class="copy-path" data-clipboard-text="原文: https://www.jiangluyu.xyz/2022/02/21/剑指Offer/　　作者: Louis" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -479,7 +599,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#栈-amp-队列"><span class="toc-number">1.</span> <span class="toc-text">栈&amp;队列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#E09-用两个队列实现栈"><span class="toc-number">1.1.</span> <span class="toc-text">E09 用两个队列实现栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E30-包含min函数的栈"><span class="toc-number">1.2.</span> <span class="toc-text">E30 包含min函数的栈</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链表"><span class="toc-number">2.</span> <span class="toc-text">链表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#E06-从尾到头打印链表"><span class="toc-number">2.1.</span> <span class="toc-text">E06 从尾到头打印链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E24-反转链表"><span class="toc-number">2.2.</span> <span class="toc-text">E24 反转链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M35-复杂链表的复制"><span class="toc-number">2.3.</span> <span class="toc-text">M35 复杂链表的复制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串"><span class="toc-number">3.</span> <span class="toc-text">字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#E05-替换空格"><span class="toc-number">3.1.</span> <span class="toc-text">E05 替换空格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E58-2-左旋转字符串"><span class="toc-number">3.2.</span> <span class="toc-text">E58-2 左旋转字符串</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查找算法"><span class="toc-number">4.</span> <span class="toc-text">查找算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#E03-数组中的重复数字"><span class="toc-number">4.1.</span> <span class="toc-text">E03 数组中的重复数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E53-1-在排序数组中查找数字"><span class="toc-number">4.2.</span> <span class="toc-text">E53-1 在排序数组中查找数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E53-2-0-n-1中缺失的数字"><span class="toc-number">4.3.</span> <span class="toc-text">E53-2 0~n-1中缺失的数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M04-二维数组中的查找"><span class="toc-number">4.4.</span> <span class="toc-text">M04 二维数组中的查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E11-旋转数组的最小数字"><span class="toc-number">4.5.</span> <span class="toc-text">E11 旋转数组的最小数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E50-第一个只出现一次的字符"><span class="toc-number">4.6.</span> <span class="toc-text">E50 第一个只出现一次的字符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搜索与回溯算法"><span class="toc-number">5.</span> <span class="toc-text">搜索与回溯算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#M32-1-从上到下打印二叉树"><span class="toc-number">5.1.</span> <span class="toc-text">M32-1 从上到下打印二叉树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E32-2-从上到下打印二叉树II"><span class="toc-number">5.2.</span> <span class="toc-text">E32-2 从上到下打印二叉树II</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M32-3-从上到下打印二叉树III"><span class="toc-number">5.3.</span> <span class="toc-text">M32-3 从上到下打印二叉树III</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M26-树的子结构"><span class="toc-number">5.4.</span> <span class="toc-text">M26 树的子结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E27-二叉树的镜像"><span class="toc-number">5.5.</span> <span class="toc-text">E27 二叉树的镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E28-对称的二叉树"><span class="toc-number">5.6.</span> <span class="toc-text">E28 对称的二叉树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态规划"><span class="toc-number">6.</span> <span class="toc-text">动态规划</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#E10-1-斐波那契数列"><span class="toc-number">6.1.</span> <span class="toc-text">E10-1 斐波那契数列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E10-2-青蛙跳台阶问题"><span class="toc-number">6.2.</span> <span class="toc-text">E10-2 青蛙跳台阶问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M63-股票的最大利润"><span class="toc-number">6.3.</span> <span class="toc-text">M63 股票的最大利润</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#栈-amp-队列"><span class="toc-number">1.</span> <span class="toc-text">栈&amp;队列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#E09-用两个队列实现栈"><span class="toc-number">1.1.</span> <span class="toc-text">E09 用两个队列实现栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E30-包含min函数的栈"><span class="toc-number">1.2.</span> <span class="toc-text">E30 包含min函数的栈</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链表"><span class="toc-number">2.</span> <span class="toc-text">链表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#E06-从尾到头打印链表"><span class="toc-number">2.1.</span> <span class="toc-text">E06 从尾到头打印链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E24-反转链表"><span class="toc-number">2.2.</span> <span class="toc-text">E24 反转链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M35-复杂链表的复制"><span class="toc-number">2.3.</span> <span class="toc-text">M35 复杂链表的复制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串"><span class="toc-number">3.</span> <span class="toc-text">字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#E05-替换空格"><span class="toc-number">3.1.</span> <span class="toc-text">E05 替换空格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E58-2-左旋转字符串"><span class="toc-number">3.2.</span> <span class="toc-text">E58-2 左旋转字符串</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查找算法"><span class="toc-number">4.</span> <span class="toc-text">查找算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#E03-数组中的重复数字"><span class="toc-number">4.1.</span> <span class="toc-text">E03 数组中的重复数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E53-1-在排序数组中查找数字"><span class="toc-number">4.2.</span> <span class="toc-text">E53-1 在排序数组中查找数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E53-2-0-n-1中缺失的数字"><span class="toc-number">4.3.</span> <span class="toc-text">E53-2 0~n-1中缺失的数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M04-二维数组中的查找"><span class="toc-number">4.4.</span> <span class="toc-text">M04 二维数组中的查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E11-旋转数组的最小数字"><span class="toc-number">4.5.</span> <span class="toc-text">E11 旋转数组的最小数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E50-第一个只出现一次的字符"><span class="toc-number">4.6.</span> <span class="toc-text">E50 第一个只出现一次的字符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搜索与回溯算法"><span class="toc-number">5.</span> <span class="toc-text">搜索与回溯算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#M32-1-从上到下打印二叉树"><span class="toc-number">5.1.</span> <span class="toc-text">M32-1 从上到下打印二叉树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E32-2-从上到下打印二叉树II"><span class="toc-number">5.2.</span> <span class="toc-text">E32-2 从上到下打印二叉树II</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M32-3-从上到下打印二叉树III"><span class="toc-number">5.3.</span> <span class="toc-text">M32-3 从上到下打印二叉树III</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M26-树的子结构"><span class="toc-number">5.4.</span> <span class="toc-text">M26 树的子结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E27-二叉树的镜像"><span class="toc-number">5.5.</span> <span class="toc-text">E27 二叉树的镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E28-对称的二叉树"><span class="toc-number">5.6.</span> <span class="toc-text">E28 对称的二叉树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M12-矩阵中的路径"><span class="toc-number">5.7.</span> <span class="toc-text">M12 矩阵中的路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M13-机器人的运动范围"><span class="toc-number">5.8.</span> <span class="toc-text">M13 机器人的运动范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M34-二叉树中和为某一值的路径"><span class="toc-number">5.9.</span> <span class="toc-text">M34 二叉树中和为某一值的路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M36-二叉搜索树与双向链表"><span class="toc-number">5.10.</span> <span class="toc-text">M36 二叉搜索树与双向链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E54-二叉搜索树的第k大节点"><span class="toc-number">5.11.</span> <span class="toc-text">E54 二叉搜索树的第k大节点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态规划"><span class="toc-number">6.</span> <span class="toc-text">动态规划</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#E10-1-斐波那契数列"><span class="toc-number">6.1.</span> <span class="toc-text">E10-1 斐波那契数列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E10-2-青蛙跳台阶问题"><span class="toc-number">6.2.</span> <span class="toc-text">E10-2 青蛙跳台阶问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M63-股票的最大利润"><span class="toc-number">6.3.</span> <span class="toc-text">M63 股票的最大利润</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E42-连续子数组的最大和"><span class="toc-number">6.4.</span> <span class="toc-text">E42 连续子数组的最大和</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M47-礼物的最大价值"><span class="toc-number">6.5.</span> <span class="toc-text">M47 礼物的最大价值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M46-把数字翻译成字符串"><span class="toc-number">6.6.</span> <span class="toc-text">M46 把数字翻译成字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M48-最长不含重复字符的子字符串"><span class="toc-number">6.7.</span> <span class="toc-text">M48 最长不含重复字符的子字符串</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#双指针"><span class="toc-number">7.</span> <span class="toc-text">双指针</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#E18-删除链表的节点"><span class="toc-number">7.1.</span> <span class="toc-text">E18 删除链表的节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E22-链表中倒数第k个节点"><span class="toc-number">7.2.</span> <span class="toc-text">E22 链表中倒数第k个节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E25-合并两个排序的列表"><span class="toc-number">7.3.</span> <span class="toc-text">E25 合并两个排序的列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E52-两个链表的第一个公共节点"><span class="toc-number">7.4.</span> <span class="toc-text">E52 两个链表的第一个公共节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E21-调整数组顺序使奇数位于偶数前面"><span class="toc-number">7.5.</span> <span class="toc-text">E21 调整数组顺序使奇数位于偶数前面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E57-和为s的两个数字"><span class="toc-number">7.6.</span> <span class="toc-text">E57 和为s的两个数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E58-1-翻转单词顺序"><span class="toc-number">7.7.</span> <span class="toc-text">E58-1 翻转单词顺序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#排序"><span class="toc-number">8.</span> <span class="toc-text">排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#M45-把数组排成最小的数"><span class="toc-number">8.1.</span> <span class="toc-text">M45 把数组排成最小的数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E61-扑克牌中的顺子"><span class="toc-number">8.2.</span> <span class="toc-text">E61 扑克牌中的顺子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E40-最小的k个数"><span class="toc-number">8.3.</span> <span class="toc-text">E40 最小的k个数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#H41-数据流中的中位数"><span class="toc-number">8.4.</span> <span class="toc-text">H41 数据流中的中位数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学"><span class="toc-number">9.</span> <span class="toc-text">数学</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#M14-2-剪绳子II"><span class="toc-number">9.1.</span> <span class="toc-text">M14-2 剪绳子II</span></a></li></ol></li></ol>
         
     </div>
     <style>
