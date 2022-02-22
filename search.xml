@@ -123,7 +123,7 @@
   </entry>
   <entry>
     <title><![CDATA[托福口语答题模板]]></title>
-    <url>%2F2020%2F02%2F15%2F%E6%89%98%E7%A6%8F%E7%AD%94%E9%A2%98%E6%A8%A1%E6%9D%BF%2F</url>
+    <url>%2F2020%2F02%2F15%2F%E6%89%98%E7%A6%8F%E5%8F%A3%E8%AF%AD%E7%AD%94%E9%A2%98%E6%A8%A1%E6%9D%BF%2F</url>
     <content type="text"><![CDATA[新托福口语答题模板总结。 TASK 1 Template: When …, I’d …/Well honestly, I (dis)agree with the idea. The most obvious reason is that + sub idea 1. In my case/Take my own experience for example, … Another reason is that + sub idea 2. To be more specific/Specifically speaking,… (Those are the reasons why I am for/against the idea.) TASK 2Template: UNIV： The university is going to/announces that…because/in order to… S/T： A student/teacher suggests university should…because/in order to… The man/woman (dis)agrees with the idea. He/She says that… TASK 3Template: The passage defines X as n. that… The professor elaborates on this with an example. …mi=>operation: Main Idea rs1=>operation: Reason 1 rs2=>operation: Reason 2 mi->rs1->rs2{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12} var code = document.getElementById("flowchart-0-code").value; var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value)); var diagram = flowchart.parse(code); diagram.drawSVG("flowchart-0", options);]]></content>
       <categories>
         <category>TOEFL</category>
